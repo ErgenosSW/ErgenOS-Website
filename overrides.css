@@ -8,3 +8,45 @@
 .app-card h3 {
   margin-top: 28px;
 }
+
+.app-card,
+.app-card.featured {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  background: #081424;
+  border-color: var(--line);
+  box-shadow: 0 0 0 rgba(0, 126, 255, 0);
+  transform: translateY(0);
+  transition:
+    transform 420ms cubic-bezier(.2, .8, .2, 1),
+    border-color 420ms ease,
+    box-shadow 420ms ease;
+}
+
+.app-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: linear-gradient(155deg, #0a2744, #07111f);
+  opacity: 0;
+  transition: opacity 420ms ease;
+}
+
+.app-card:hover {
+  transform: translateY(-5px);
+  border-color: rgba(49, 182, 255, .55);
+  box-shadow: 0 18px 45px rgba(0, 112, 214, .16);
+}
+
+.app-card:hover::before {
+  opacity: 1;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .app-card,
+  .app-card::before {
+    transition: none;
+  }
+}
