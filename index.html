@@ -6,18 +6,28 @@
   <title>ErgenOS — Your system. Under control.</title>
   <meta name="description" content="An approachable Arch Linux based desktop with graphical software management and built-in Btrfs recovery.">
   <meta name="theme-color" content="#030a14">
+  <link rel="canonical" href="https://ergenossw.github.io/ErgenOS-Website/">
   <meta property="og:title" content="ErgenOS — Your system. Under control.">
   <meta property="og:description" content="Arch power with graphical tools and built-in recovery.">
   <meta property="og:type" content="website">
-  <meta property="og:image" content="assets/ergenos-wallpaper.png">
-  <link rel="icon" href="assets/ergenos-logo.png">
+  <meta property="og:url" content="https://ergenossw.github.io/ErgenOS-Website/">
+  <meta property="og:image" content="https://ergenossw.github.io/ErgenOS-Website/assets/social-card.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="ErgenOS — Your system. Under control.">
+  <meta name="twitter:description" content="Arch power with graphical tools and built-in recovery.">
+  <meta name="twitter:image" content="https://ergenossw.github.io/ErgenOS-Website/assets/social-card.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="overrides.css">
 </head>
 <body>
   <header class="nav-shell">
     <a class="brand" href="#top"><img src="assets/ergenos-logo.png" alt=""><span>ErgenOS</span></a>
-    <nav aria-label="Main navigation"><a href="#features">Why ErgenOS</a><a href="#apps">Applications</a><a href="#install">Install</a><a href="#faq">FAQ</a></nav>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="main-nav" aria-label="Open navigation"><span></span><span></span><span></span></button>
+    <nav id="main-nav" aria-label="Main navigation"><a href="#features">Why ErgenOS</a><a href="#apps">Applications</a><a href="#requirements">Requirements</a><a href="#install">Install</a><a href="#faq">FAQ</a></nav>
     <a class="button small" href="#download">Download 1.0</a>
   </header>
 
@@ -30,12 +40,10 @@
         <div class="hero-actions"><a class="button" href="#download">Download ErgenOS</a><a class="text-link" href="#features">Explore the system <span>→</span></a></div>
         <p class="fine-print">Free and open source · GNOME · x86_64</p>
       </div>
-      <div class="desktop-shot" aria-label="ErgenOS desktop preview">
-        <div class="desktop-top"><span>ErgenOS</span><span>1.0</span></div>
-        <img src="assets/ergenos-wallpaper.png" alt="ErgenOS blue desktop wallpaper">
-        <div class="desktop-window"><div class="window-bar"><i></i><i></i><i></i></div><div class="window-content"><img src="assets/ergenos-logo.png" alt=""><strong>Welcome to ErgenOS</strong><span>Everything you need to get started.</span></div></div>
-        <div class="dock"><b></b><b></b><b></b><b></b><b></b></div>
-      </div>
+      <a class="desktop-shot" href="assets/screenshots/ergenos-desktop.png" aria-label="Open a full-size screenshot of the ErgenOS desktop">
+        <img src="assets/screenshots/ergenos-desktop.webp" alt="ErgenOS 1.0 desktop running on physical hardware">
+        <span class="shot-hint">View full size</span>
+      </a>
     </section>
 
     <section class="section" id="features">
@@ -56,9 +64,41 @@
     <section class="section apps-section" id="apps">
       <div class="section-heading"><span class="eyebrow">Made for ErgenOS</span><h2>Three tools. One coherent system.</h2></div>
       <div class="app-grid">
-        <article class="app-card"><img src="assets/welcome-logo.png" alt="ErgenOS Welcome icon"><div><h3>ErgenOS Welcome</h3><p>Your starting point after installation, with system information and shortcuts to essential tools.</p></div></article>
-        <article class="app-card featured"><img src="assets/ergenpac-logo.png" alt="ErgenPac icon"><div><h3>ErgenPac</h3><p>Search, install, remove and update software from Arch Linux and Flathub without living in a terminal.</p></div></article>
-        <article class="app-card"><img src="assets/ergenctl-logo.png" alt="ErgenCTL icon"><div><h3>ErgenCTL</h3><p>Diagnose the installation, inspect boot logs, check snapshots and plan safe repairs.</p></div></article>
+        <a class="app-card" href="https://github.com/ErgenosSW/ErgenOS-Welcome"><img src="assets/welcome-logo.png" alt="ErgenOS Welcome icon"><div><h3>ErgenOS Welcome</h3><p>Your starting point after installation, with system information and shortcuts to essential tools.</p><span class="card-link">View on GitHub →</span></div></a>
+        <a class="app-card featured" href="https://github.com/ErgenosSW/ErgenPac"><img src="assets/ergenpac-logo.png" alt="ErgenPac icon"><div><h3>ErgenPac</h3><p>Search, install, remove and update software from Arch Linux and Flathub without living in a terminal.</p><span class="card-link">View on GitHub →</span></div></a>
+        <a class="app-card" href="https://github.com/ErgenosSW/ErgenCTL"><img src="assets/ergenctl-logo.png" alt="ErgenCTL icon"><div><h3>ErgenCTL</h3><p>Diagnose the installation, inspect boot logs, check snapshots and plan safe repairs.</p><span class="card-link">View on GitHub →</span></div></a>
+      </div>
+    </section>
+
+    <section class="section gallery-section" id="screenshots">
+      <div class="section-heading"><span class="eyebrow">See it in action</span><h2>A real desktop. Real ErgenOS tools.</h2><p>ErgenOS 1.0 running on physical hardware, with the system tools included in every installation.</p></div>
+      <div class="screenshot-grid">
+        <a class="screenshot-card screenshot-wide" href="assets/screenshots/ergenpac-search.png">
+          <img src="assets/screenshots/ergenpac-search.webp" alt="ErgenPac displaying a package from the ErgenOS repository" loading="lazy">
+          <span><strong>Find and manage software</strong><small>ErgenPac</small></span>
+        </a>
+        <a class="screenshot-card" href="assets/screenshots/ergenctl-system-check.png">
+          <img src="assets/screenshots/ergenctl-system-check.webp" alt="ErgenCTL displaying successful system checks" loading="lazy">
+          <span><strong>Know your system is healthy</strong><small>ErgenCTL</small></span>
+        </a>
+        <a class="screenshot-card" href="assets/screenshots/ergenos-welcome.png">
+          <img src="assets/screenshots/ergenos-welcome.webp" alt="ErgenOS Welcome with shortcuts to ErgenPac and ErgenCTL" loading="lazy">
+          <span><strong>Start in the right place</strong><small>ErgenOS Welcome</small></span>
+        </a>
+      </div>
+    </section>
+
+    <section class="section requirements-section" id="requirements">
+      <div class="section-heading"><span class="eyebrow">System requirements</span><h2>What you need to run ErgenOS.</h2><p>A modern 64-bit PC with UEFI firmware is enough to get started.</p></div>
+      <div class="requirements-grid">
+        <article><span>CPU</span><h3>x86_64 processor</h3><p>Any modern 64-bit Intel or AMD processor.</p></article>
+        <article><span>Memory</span><h3>4 GB recommended</h3><p>A fresh ErgenOS desktop uses approximately 1.6 GB after login.</p></article>
+        <article><span>Storage</span><h3>40 GB recommended</h3><p>Leave additional free space for applications and Btrfs snapshots.</p></article>
+        <article><span>Firmware</span><h3>UEFI</h3><p>ErgenOS 1.0 is designed for installation in UEFI mode.</p></article>
+      </div>
+      <div class="hardware-notes">
+        <p><strong>Secure Boot:</strong> manual setup using the <a href="https://wiki.archlinux.org/title/Unified_Extensible_Firmware_Interface/Secure_Boot">ArchWiki procedure</a> is currently required. Broader built-in support is planned.</p>
+        <p><strong>NVIDIA:</strong> proprietary drivers are currently installed and configured in the same way as on Arch Linux. Installer-assisted setup is planned for a future release.</p>
       </div>
     </section>
 
@@ -69,11 +109,12 @@
         <li><span>2</span><div><h3>Create a USB</h3><p>Write the image with Rufus, Etcher or your preferred tool.</p></div></li>
         <li><span>3</span><div><h3>Boot and install</h3><p>Start from USB and follow the graphical Calamares installer.</p></div></li>
       </ol>
+      <a class="text-link guide-link" href="installation.html">Read the complete installation guide <span>→</span></a>
     </section>
 
     <section class="download" id="download">
       <div><span class="eyebrow light">ErgenOS 1.0</span><h2>Take control of your desktop.</h2></div>
-      <div class="download-actions"><a class="button white" href="https://drive.google.com/file/d/1ulkFifSUPisbFc_xC41_eRFDkI1hzKlG/view?usp=sharing">Download ISO</a><a href="https://github.com/ErgenosSW/ErgenOS-Linux/releases/tag/v1.0.0">GitHub release →</a><code>SHA-256: 236e9f6a…cba754</code></div>
+      <div class="download-actions"><a class="button white" href="https://drive.google.com/file/d/1ulkFifSUPisbFc_xC41_eRFDkI1hzKlG/view?usp=sharing">Download via Google Drive</a><a href="https://github.com/ErgenosSW/ErgenOS-Linux/releases/tag/v1.0.0">GitHub release →</a><div class="release-meta"><span>2.50 GiB</span><span>Released September 7, 2026</span></div><div class="checksum"><span>SHA-256</span><code id="iso-checksum">236e9f6a411915e67a6800cb67cf5939cba6d30d399363c9a250186f32cba754</code><button type="button" data-copy-checksum>Copy</button></div></div>
     </section>
 
     <section class="section faq" id="faq">
@@ -83,11 +124,12 @@
         <details><summary>Is ErgenOS a gaming distribution?</summary><p>Not yet. Gaming-oriented features are part of the long-term direction, but ErgenOS 1.0 is a general-purpose desktop system.</p></details>
         <details><summary>How are updates delivered?</summary><p>Arch packages come from the standard Arch repositories. ErgenOS applications are distributed through the signed ErgenOS repository and handled by Pacman or ErgenPac.</p></details>
         <details><summary>Can I use the AUR?</summary><p>Yes. During installation you can stay with official repositories or configure yay, paru or Chaotic-AUR.</p></details>
-        <details><summary>Does ErgenOS support Secure Boot?</summary><p>Secure Boot is not supported in ErgenOS 1.0.</p></details>
+        <details><summary>Does ErgenOS support Secure Boot?</summary><p>ErgenOS 1.0 does not configure Secure Boot automatically. Advanced users can set it up manually using the ArchWiki procedure; broader built-in support is planned.</p></details>
       </div>
     </section>
   </main>
 
-  <footer><a class="brand" href="#top"><img src="assets/ergenos-logo.png" alt=""><span>ErgenOS</span></a><p>Independent. Open source. Built with care.</p><div><a href="https://github.com/ErgenosSW">GitHub</a><a href="https://github.com/ErgenosSW/ErgenOS-Linux/issues">Report an issue</a><a href="https://github.com/ErgenosSW/ErgenOS-Linux/blob/main/LICENSE">License</a></div></footer>
+  <footer><a class="brand" href="#top"><img src="assets/ergenos-logo.png" alt=""><span>ErgenOS</span></a><p>Independent. Open source. Built with care.</p><div><a href="installation.html">Installation</a><a href="known-limitations.html">Known limitations</a><a href="https://github.com/ErgenosSW">GitHub</a><a href="https://github.com/ErgenosSW/ErgenOS-Linux/issues">Report an issue</a><a href="https://github.com/ErgenosSW/ErgenOS-Linux/blob/main/LICENSE">License</a></div></footer>
+  <script src="script.js"></script>
 </body>
 </html>

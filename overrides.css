@@ -9,6 +9,14 @@
   margin-top: 28px;
 }
 
+.card-link {
+  display: inline-block;
+  margin-top: 10px;
+  color: #48bfff;
+  font-size: 13px;
+  font-weight: 700;
+}
+
 .app-card,
 .app-card.featured {
   position: relative;
@@ -56,6 +64,334 @@
 .desktop-shot:hover {
   transform: perspective(1200px) rotateY(-1deg) rotateX(1deg) translateY(-6px);
   box-shadow: 0 48px 110px rgba(0, 0, 0, .58), 0 0 110px rgba(0, 126, 255, .2);
+}
+
+.desktop-shot > img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.shot-hint {
+  position: absolute;
+  right: 18px;
+  bottom: 18px;
+  padding: 9px 13px;
+  border: 1px solid rgba(255, 255, 255, .2);
+  border-radius: 999px;
+  background: rgba(3, 10, 20, .72);
+  color: #eaf3ff;
+  font-size: 12px;
+  font-weight: 700;
+  opacity: 0;
+  transform: translateY(8px);
+  backdrop-filter: blur(12px);
+  transition: opacity 300ms ease, transform 300ms ease;
+}
+
+.desktop-shot:hover .shot-hint,
+.desktop-shot:focus-visible .shot-hint {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.gallery-section {
+  padding-top: 70px;
+}
+
+.requirements-section {
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+
+.requirements-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.requirements-grid article {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  padding: 26px;
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  background: linear-gradient(145deg, rgba(14, 35, 59, .8), rgba(6, 18, 33, .8));
+  box-shadow: 0 0 0 rgba(0, 126, 255, 0);
+  transform: translateY(0);
+  transition: transform 420ms cubic-bezier(.2, .8, .2, 1), border-color 420ms ease, box-shadow 420ms ease;
+}
+
+.requirements-grid article::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: linear-gradient(155deg, #0a2744, #07111f);
+  opacity: 0;
+  transition: opacity 420ms ease;
+}
+
+.requirements-grid article:hover {
+  transform: translateY(-6px);
+  border-color: rgba(49, 182, 255, .55);
+  box-shadow: 0 18px 45px rgba(0, 112, 214, .16);
+}
+
+.requirements-grid article:hover::before {
+  opacity: 1;
+}
+
+.requirements-grid article:hover > span {
+  color: #8bddff;
+  text-shadow: 0 0 16px rgba(49, 182, 255, .72);
+}
+
+.requirements-grid article > span {
+  color: #31b6ff;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+}
+
+.requirements-grid h3 {
+  margin: 22px 0 10px;
+}
+
+.requirements-grid p,
+.hardware-notes p {
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.65;
+}
+
+.hardware-notes {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+  margin-top: 18px;
+}
+
+.hardware-notes p {
+  margin: 0;
+  padding: 22px 24px;
+  border-left: 2px solid #31b6ff;
+  background: rgba(8, 20, 36, .72);
+}
+
+.hardware-notes strong {
+  color: var(--ink);
+}
+
+.hardware-notes a,
+.page-content a {
+  color: #54c3ff;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.guide-link {
+  display: inline-flex;
+  margin-top: 36px;
+}
+
+.release-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 16px;
+  color: #d7eeff;
+  font-size: 12px;
+}
+
+.checksum {
+  width: min(470px, 42vw);
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 7px 10px;
+  padding: 13px 14px;
+  border: 1px solid rgba(255, 255, 255, .2);
+  border-radius: 12px;
+  background: rgba(1, 40, 95, .24);
+}
+
+.checksum > span {
+  grid-column: 1 / -1;
+  color: #d7eeff;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: .12em;
+}
+
+.checksum code {
+  min-width: 0;
+  overflow: hidden;
+  color: #fff;
+  font-size: 11px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.checksum button {
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: #fff;
+  cursor: pointer;
+  font: inherit;
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.menu-toggle {
+  display: none;
+  width: 42px;
+  height: 42px;
+  padding: 10px;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  background: rgba(255, 255, 255, .04);
+}
+
+.menu-toggle span {
+  display: block;
+  height: 2px;
+  margin: 4px 0;
+  border-radius: 2px;
+  background: var(--ink);
+  transition: transform 250ms ease, opacity 250ms ease;
+}
+
+.page-main {
+  min-height: calc(100vh - 180px);
+}
+
+.page-hero {
+  max-width: 920px;
+  margin: 0 auto;
+  padding: 95px 28px 45px;
+}
+
+.page-hero h1 {
+  font-size: clamp(48px, 7vw, 76px);
+}
+
+.page-content {
+  max-width: 920px;
+  margin: 0 auto;
+  padding: 0 28px 110px;
+}
+
+.guide-steps {
+  display: grid;
+  gap: 16px;
+  padding: 0;
+  list-style: none;
+}
+
+.guide-steps li,
+.limitation-card {
+  padding: 28px;
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  background: #081424;
+}
+
+.guide-steps h2,
+.limitation-card h2 {
+  margin: 0 0 12px;
+  font-size: 26px;
+  letter-spacing: -.025em;
+}
+
+.guide-steps p,
+.limitation-card p,
+.page-content > p {
+  color: var(--muted);
+  line-height: 1.75;
+}
+
+.guide-steps code {
+  display: block;
+  margin-top: 14px;
+  padding: 13px 15px;
+  overflow-x: auto;
+  border-radius: 10px;
+  background: #030a14;
+  color: #b9e7ff;
+}
+
+.limitation-list {
+  display: grid;
+  gap: 16px;
+}
+
+footer > div {
+  flex-wrap: wrap;
+}
+
+.screenshot-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.screenshot-card {
+  position: relative;
+  min-width: 0;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: 20px;
+  background: #081424;
+  box-shadow: 0 16px 50px rgba(0, 0, 0, .22);
+  transition: transform 420ms cubic-bezier(.2, .8, .2, 1), border-color 420ms ease, box-shadow 420ms ease;
+}
+
+.screenshot-card:hover {
+  transform: translateY(-6px);
+  border-color: rgba(49, 182, 255, .5);
+  box-shadow: 0 24px 65px rgba(0, 95, 190, .18);
+}
+
+.screenshot-card:focus-visible,
+.desktop-shot:focus-visible {
+  outline: 3px solid #54c3ff;
+  outline-offset: 4px;
+}
+
+.screenshot-card img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  transition: transform 650ms cubic-bezier(.2, .8, .2, 1);
+}
+
+.screenshot-card:hover img {
+  transform: scale(1.018);
+}
+
+.screenshot-card > span {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 20px 22px;
+}
+
+.screenshot-card strong {
+  font-size: 16px;
+}
+
+.screenshot-card small {
+  flex: 0 0 auto;
+  color: var(--muted);
+}
+
+.screenshot-wide {
+  grid-column: 1 / -1;
 }
 
 .feature-grid article {
@@ -127,6 +463,71 @@ details[open] summary::after {
   .desktop-shot:hover {
     transform: translateY(-4px);
   }
+
+  .screenshot-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .screenshot-wide {
+    grid-column: auto;
+  }
+
+  .requirements-grid,
+  .hardware-notes {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .menu-toggle {
+    display: block;
+    margin-left: auto;
+    margin-right: 12px;
+  }
+
+  .nav-shell nav {
+    position: absolute;
+    top: 68px;
+    right: 16px;
+    left: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    padding: 10px;
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    background: rgba(3, 10, 20, .97);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, .45);
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(-10px);
+    transition: opacity 250ms ease, transform 250ms ease;
+  }
+
+  .nav-shell nav a {
+    padding: 13px 14px;
+  }
+
+  .nav-shell nav.is-open {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateY(0);
+  }
+
+  .checksum {
+    width: min(100%, 470px);
+  }
+}
+
+@media (max-width: 560px) {
+  .requirements-grid,
+  .hardware-notes {
+    grid-template-columns: 1fr;
+  }
+
+  .screenshot-card > span {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 5px;
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -138,8 +539,16 @@ details[open] summary::after {
   .brand img,
   .button,
   .timeline i::after,
-  summary::after {
+  summary::after,
+  .shot-hint,
+  .screenshot-card,
+  .screenshot-card img {
     animation: none;
+    transition: none;
+  }
+
+  .requirements-grid article,
+  .requirements-grid article::before {
     transition: none;
   }
 }

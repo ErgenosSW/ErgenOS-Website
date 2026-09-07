@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Known limitations — ErgenOS 1.0</title>
+  <meta name="description" content="Known limitations and hardware support notes for ErgenOS 1.0.">
+  <meta name="theme-color" content="#030a14">
+  <link rel="canonical" href="https://ergenossw.github.io/ErgenOS-Website/known-limitations.html">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="overrides.css">
+</head>
+<body>
+  <header class="nav-shell"><a class="brand" href="index.html"><img src="assets/ergenos-logo.png" alt=""><span>ErgenOS</span></a><a class="button small" href="index.html#download">Download 1.0</a></header>
+  <main class="page-main">
+    <section class="page-hero"><span class="eyebrow">ErgenOS 1.0</span><h1>Known limitations.</h1><p class="lead">ErgenOS is ready for daily use, but its first stable release still has a few clearly defined boundaries.</p></section>
+    <section class="page-content limitation-list">
+      <article class="limitation-card"><h2>Secure Boot</h2><p>Automatic Secure Boot configuration is not included. Advanced users can configure it manually using the <a href="https://wiki.archlinux.org/title/Unified_Extensible_Firmware_Interface/Secure_Boot">ArchWiki procedure</a>. Broader built-in support is planned.</p></article>
+      <article class="limitation-card"><h2>NVIDIA proprietary drivers</h2><p>ErgenOS does not currently automate proprietary NVIDIA driver selection in the installer. Installation and configuration follow the same process as on Arch Linux.</p></article>
+      <article class="limitation-card"><h2>Hardware coverage</h2><p>The range of validated computer configurations is still limited. Please report hardware-specific problems with the exact device model and relevant system information.</p></article>
+      <article class="limitation-card"><h2>Network-dependent options</h2><p>Optional repository setup and downloading additional software require an internet connection. ErgenOS applications use the signed ErgenOS repository, while Arch packages continue to come from Arch mirrors.</p></article>
+    </section>
+  </main>
+  <footer><a class="brand" href="index.html"><img src="assets/ergenos-logo.png" alt=""><span>ErgenOS</span></a><p>Independent. Open source. Built with care.</p><div><a href="index.html">Home</a><a href="installation.html">Installation</a><a href="https://github.com/ErgenosSW/ErgenOS-Linux/issues">Report an issue</a></div></footer>
+</body>
+</html>
