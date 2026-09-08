@@ -323,6 +323,10 @@
   color: #b9e7ff;
 }
 
+.guide-steps pre {
+  margin: 0;
+}
+
 .limitation-list {
   display: grid;
   gap: 16px;

@@ -24,15 +24,15 @@
       <ol class="guide-steps">
         <li><h2>1. Update ErgenOS and install the tool</h2><p>Install the signed package from the official ErgenOS repository.</p><code>sudo pacman -Syu ergenos-secureboot</code></li>
         <li><h2>2. Run the safety check</h2><p>Confirm that the system uses UEFI, the EFI System Partition is available and all required components can be prepared.</p><code>sudo ergenos-secureboot enable --dry-run</code><p>Continue only when the command reports that the preflight check passed.</p></li>
-        <li><h2>3. Prepare Secure Boot</h2><p>Create the ErgenOS Machine Owner Key, sign the kernel, GRUB and installed DKMS modules, and create the separate ErgenOS Secure Boot entry.</p><code>sudo ergenos-secureboot enable</code><p>Choose a temporary password when prompted. You will use it once in MokManager during the next boot.</p></li>
+        <li><h2>3. Prepare Secure Boot</h2><p>Create the ErgenOS Machine Owner Key, sign the kernel, GRUB and installed DKMS modules, and create the separate ErgenOS Secure Boot entry.</p><code>sudo ergenos-secureboot enable</code><p>Choose a temporary enrollment password when prompted. It is used only once by MokManager during the next boot; it is not your system password and it does not replace or expose the private signing key.</p></li>
         <li><h2>4. Enrol the Machine Owner Key</h2><p>Restart through the <strong>ErgenOS Secure Boot</strong> entry. In MokManager choose <strong>Enroll MOK</strong>, continue, confirm the key and enter the temporary password from the previous step. Then reboot.</p></li>
         <li><h2>5. Enable Secure Boot in the firmware</h2><p>Open the computer's UEFI settings and enable Secure Boot in its standard or default-key mode. Do not clear or replace the platform keys. Save the settings and boot <strong>ErgenOS Secure Boot</strong>.</p></li>
-        <li><h2>6. Verify the result</h2><p>Complete configuration and verify the entire boot chain.</p><code>sudo ergenos-secureboot finalize
+        <li><h2>6. Verify the result</h2><p>Complete configuration and verify the entire boot chain.</p><pre><code>sudo ergenos-secureboot finalize
 sudo ergenos-secureboot check
-mokutil --sb-state</code><p>The expected state is <strong>active</strong>, and mokutil should report <strong>SecureBoot enabled</strong>.</p></li>
+mokutil --sb-state</code></pre><p>The expected state is <strong>active</strong>, and mokutil should report <strong>SecureBoot enabled</strong>.</p></li>
       </ol>
       <div class="hardware-notes">
-        <p><strong>After updates:</strong> packaged hooks handle kernel and GRUB updates automatically. After installing or updating a DKMS driver, run <code>sudo ergenos-secureboot refresh</code> and verify the result with <code>sudo ergenos-secureboot check</code>.</p>
+        <p><strong>After updates:</strong> packaged hooks handle kernel and GRUB updates automatically. After installing or updating an out-of-tree DKMS driver, such as an NVIDIA driver or Broadcom Wi-Fi module, run <code>sudo ergenos-secureboot refresh</code> and verify the result with <code>sudo ergenos-secureboot check</code>.</p>
         <p><strong>Need to remove it?</strong> First run <code>sudo ergenos-secureboot remove-mok</code>, confirm removal in MokManager, disable Secure Boot in the firmware, and then run <code>sudo ergenos-secureboot disable</code>. The package blocks unsafe removal while support is still active.</p>
       </div>
     </section>
