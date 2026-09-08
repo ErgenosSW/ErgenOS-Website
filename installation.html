@@ -21,9 +21,9 @@
         <li><h2>1. Download the ISO</h2><p>Download ErgenOS 1.0 from the official website. The image is 2.50 GiB.</p></li>
         <li><h2>2. Verify the image</h2><p>Compare the SHA-256 checksum before writing the image to a USB drive.</p><code>echo "236e9f6a411915e67a6800cb67cf5939cba6d30d399363c9a250186f32cba754  ergenos-1.0.0-x86_64.iso" | sha256sum -c -</code></li>
         <li><h2>3. Create the installation USB</h2><p>Use Rufus or Etcher on Windows, or GNOME Disks on Linux. Select the downloaded ISO and the correct USB drive. Writing the image erases that USB drive.</p></li>
-        <li><h2>4. Boot in UEFI mode</h2><p>Restart the computer, open its boot menu and select the USB drive's UEFI entry. Disable Secure Boot for the simplest installation. Manual Secure Boot setup remains possible using the ArchWiki after installation.</p></li>
+        <li><h2>4. Boot in UEFI mode</h2><p>Restart the computer, open its boot menu and select the USB drive's UEFI entry. The ErgenOS 1.0 ISO currently requires Secure Boot to be disabled during installation.</p></li>
         <li><h2>5. Install with Calamares</h2><p>Open Install ErgenOS, select your language, keyboard, disk layout and user account, then review the summary before starting installation. Back up important data before changing disk partitions.</p></li>
-        <li><h2>6. Restart and update</h2><p>Remove the USB drive after installation, boot ErgenOS and use ErgenPac to check for system updates.</p></li>
+        <li><h2>6. Restart and update</h2><p>Remove the USB drive after installation, boot ErgenOS and use ErgenPac to check for system updates. If you want to enable it afterwards, follow the separate <a href="secure-boot.html">Secure Boot setup guide</a>.</p></li>
       </ol>
     </section>
   </main>

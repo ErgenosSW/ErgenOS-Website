@@ -97,7 +97,7 @@
         <article><span>Firmware</span><h3>UEFI</h3><p>ErgenOS 1.0 is designed for installation in UEFI mode.</p></article>
       </div>
       <div class="hardware-notes">
-        <p><strong>Secure Boot:</strong> manual setup using the <a href="https://wiki.archlinux.org/title/Unified_Extensible_Firmware_Interface/Secure_Boot">ArchWiki procedure</a> is currently required. Broader built-in support is planned.</p>
+        <p><strong>Secure Boot:</strong> experimental post-install support is available through Microsoft-signed shim and a Machine Owner Key. See the <a href="secure-boot.html">Secure Boot setup guide</a>.</p>
         <p><strong>NVIDIA:</strong> proprietary drivers are currently installed and configured in the same way as on Arch Linux. Installer-assisted setup is planned for a future release.</p>
       </div>
     </section>
@@ -124,7 +124,7 @@
         <details><summary>Is ErgenOS a gaming distribution?</summary><p>Not yet. Gaming-oriented features are part of the long-term direction, but ErgenOS 1.0 is a general-purpose desktop system.</p></details>
         <details><summary>How are updates delivered?</summary><p>Arch packages come from the standard Arch repositories. ErgenOS applications are distributed through the signed ErgenOS repository and handled by Pacman or ErgenPac.</p></details>
         <details><summary>Can I use the AUR?</summary><p>Yes. During installation you can stay with official repositories or configure yay, paru or Chaotic-AUR.</p></details>
-        <details><summary>Does ErgenOS support Secure Boot?</summary><p>ErgenOS 1.0 does not configure Secure Boot automatically. Advanced users can set it up manually using the ArchWiki procedure; broader built-in support is planned.</p></details>
+        <details><summary>Does ErgenOS support Secure Boot?</summary><p>Experimental post-install support is available through the signed ErgenOS repository. The current ISO must be installed with Secure Boot disabled; follow the <a href="secure-boot.html">Secure Boot setup guide</a> after installation.</p></details>
       </div>
     </section>
   </main>

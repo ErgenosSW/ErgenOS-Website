@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Secure Boot setup — ErgenOS</title>
+  <meta name="description" content="Configure experimental Secure Boot support on an installed ErgenOS system using shim and a Machine Owner Key.">
+  <meta name="theme-color" content="#030a14">
+  <link rel="canonical" href="https://ergenossw.github.io/ErgenOS-Website/secure-boot.html">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="overrides.css">
+</head>
+<body>
+  <header class="nav-shell"><a class="brand" href="index.html"><img src="assets/ergenos-logo.png" alt=""><span>ErgenOS</span></a><a class="button small" href="index.html#download">Download 1.0</a></header>
+  <main class="page-main">
+    <section class="page-hero"><span class="eyebrow">Experimental support</span><h1>Secure Boot setup.</h1><p class="lead">ErgenOS can use Microsoft-signed shim and your own Machine Owner Key without replacing the firmware keys.</p></section>
+    <section class="page-content">
+      <div class="hardware-notes">
+        <p><strong>Before you begin:</strong> the ErgenOS 1.0 installation ISO does not currently boot with Secure Boot enabled. Install ErgenOS normally with Secure Boot disabled, then follow this guide from the installed system.</p>
+        <p><strong>Test coverage:</strong> this workflow has been validated with QEMU/OVMF and on a physical Lenovo ThinkPad. Firmware interfaces differ between manufacturers, so keep your firmware recovery options and important data available.</p>
+      </div>
+      <ol class="guide-steps">
+        <li><h2>1. Update ErgenOS and install the tool</h2><p>Install the signed package from the official ErgenOS repository.</p><code>sudo pacman -Syu ergenos-secureboot</code></li>
+        <li><h2>2. Run the safety check</h2><p>Confirm that the system uses UEFI, the EFI System Partition is available and all required components can be prepared.</p><code>sudo ergenos-secureboot enable --dry-run</code><p>Continue only when the command reports that the preflight check passed.</p></li>
+        <li><h2>3. Prepare Secure Boot</h2><p>Create the ErgenOS Machine Owner Key, sign the kernel, GRUB and installed DKMS modules, and create the separate ErgenOS Secure Boot entry.</p><code>sudo ergenos-secureboot enable</code><p>Choose a temporary password when prompted. You will use it once in MokManager during the next boot.</p></li>
+        <li><h2>4. Enrol the Machine Owner Key</h2><p>Restart through the <strong>ErgenOS Secure Boot</strong> entry. In MokManager choose <strong>Enroll MOK</strong>, continue, confirm the key and enter the temporary password from the previous step. Then reboot.</p></li>
+        <li><h2>5. Enable Secure Boot in the firmware</h2><p>Open the computer's UEFI settings and enable Secure Boot in its standard or default-key mode. Do not clear or replace the platform keys. Save the settings and boot <strong>ErgenOS Secure Boot</strong>.</p></li>
+        <li><h2>6. Verify the result</h2><p>Complete configuration and verify the entire boot chain.</p><code>sudo ergenos-secureboot finalize
+sudo ergenos-secureboot check
+mokutil --sb-state</code><p>The expected state is <strong>active</strong>, and mokutil should report <strong>SecureBoot enabled</strong>.</p></li>
+      </ol>
+      <div class="hardware-notes">
+        <p><strong>After kernel, GRUB or DKMS updates:</strong> ErgenOS hooks refresh the signed components automatically. You can also run <code>sudo ergenos-secureboot refresh</code> manually and verify them with <code>sudo ergenos-secureboot check</code>.</p>
+        <p><strong>Need to remove it?</strong> First run <code>sudo ergenos-secureboot remove-mok</code>, confirm removal in MokManager, disable Secure Boot in the firmware, and then run <code>sudo ergenos-secureboot disable</code>. The package blocks unsafe removal while support is still active.</p>
+      </div>
+    </section>
+  </main>
+  <footer><a class="brand" href="index.html"><img src="assets/ergenos-logo.png" alt=""><span>ErgenOS</span></a><p>Independent. Open source. Built with care.</p><div><a href="index.html">Home</a><a href="installation.html">Installation</a><a href="known-limitations.html">Known limitations</a><a href="https://github.com/ErgenosSW/ErgenOS-SecureBoot">Source code</a></div></footer>
+</body>
+</html>
