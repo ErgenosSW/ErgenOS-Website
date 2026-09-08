@@ -32,7 +32,7 @@ sudo ergenos-secureboot check
 mokutil --sb-state</code><p>The expected state is <strong>active</strong>, and mokutil should report <strong>SecureBoot enabled</strong>.</p></li>
       </ol>
       <div class="hardware-notes">
-        <p><strong>After kernel, GRUB or DKMS updates:</strong> ErgenOS hooks refresh the signed components automatically. You can also run <code>sudo ergenos-secureboot refresh</code> manually and verify them with <code>sudo ergenos-secureboot check</code>.</p>
+        <p><strong>After updates:</strong> packaged hooks handle kernel and GRUB updates automatically. After installing or updating a DKMS driver, run <code>sudo ergenos-secureboot refresh</code> and verify the result with <code>sudo ergenos-secureboot check</code>.</p>
         <p><strong>Need to remove it?</strong> First run <code>sudo ergenos-secureboot remove-mok</code>, confirm removal in MokManager, disable Secure Boot in the firmware, and then run <code>sudo ergenos-secureboot disable</code>. The package blocks unsafe removal while support is still active.</p>
       </div>
     </section>
