@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="pl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Znane ograniczenia — ErgenOS 1.0</title>
+  <meta name="description" content="Znane ograniczenia i informacje o obsłudze sprzętu w ErgenOS 1.0.">
+  <meta name="theme-color" content="#030a14">
+  <link rel="canonical" href="https://ergenossw.github.io/ErgenOS-Website/pl/known-limitations.html">
+  <link rel="alternate" hreflang="en" href="https://ergenossw.github.io/ErgenOS-Website/known-limitations.html">
+  <link rel="alternate" hreflang="pl" href="https://ergenossw.github.io/ErgenOS-Website/pl/known-limitations.html">
+  <link rel="alternate" hreflang="x-default" href="https://ergenossw.github.io/ErgenOS-Website/known-limitations.html">
+  <link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon-32.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="../assets/apple-touch-icon.png">
+  <link rel="stylesheet" href="../style.css">
+  <link rel="stylesheet" href="../overrides.css">
+</head>
+<body>
+  <header class="nav-shell"><a class="brand" href="index.html"><img src="../assets/ergenos-logo.png" alt=""><span>ErgenOS</span></a><div class="header-actions"><div class="language-switcher" aria-label="Język"><a href="../known-limitations.html" lang="en" hreflang="en" aria-label="English">EN</a><span aria-current="page">PL</span></div><a class="button small" href="index.html#download">Pobierz 1.0</a></div></header>
+  <main class="page-main">
+    <section class="page-hero"><span class="eyebrow">ErgenOS 1.0</span><h1>Znane ograniczenia.</h1><p class="lead">ErgenOS nadaje się do codziennej pracy, ale pierwsze stabilne wydanie nie obsługuje jeszcze wszystkiego.</p></section>
+    <section class="page-content limitation-list">
+      <article class="limitation-card"><h2>Secure Boot</h2><p>Eksperymentalne wsparcie po instalacji jest dostępne przez shim podpisany przez Microsoft i Machine Owner Key. Samo ISO ErgenOS 1.0 nadal wymaga wyłączenia Secure Boot. Procedurę sprawdzono na QEMU/OVMF i jednym Lenovo ThinkPadzie; zobacz <a href="secure-boot.html">poradnik konfiguracji</a>.</p></article>
+      <article class="limitation-card"><h2>Przetestowany sprzęt</h2><p>ErgenOS został dotąd sprawdzony na ograniczonej liczbie komputerów. Jeśli trafisz na problem sprzętowy, zgłoś go wraz z dokładnym modelem urządzenia i informacjami o systemie.</p></article>
+      <article class="limitation-card"><h2>Funkcje wymagające internetu</h2><p>Włączenie dodatkowych repozytoriów i pobieranie programów wymaga połączenia z internetem. Aplikacje ErgenOS pochodzą z podpisanego repozytorium projektu, natomiast pozostałe pakiety są pobierane z serwerów Arch Linux.</p></article>
+    </section>
+  </main>
+  <footer><a class="brand" href="index.html"><img src="../assets/ergenos-logo.png" alt=""><span>ErgenOS</span></a><p>Niezależny. Otwarty. Dopracowany.</p><div><a href="index.html">Strona główna</a><a href="installation.html">Instalacja</a><a href="https://github.com/ErgenosSW/ErgenOS-Linux/issues">Zgłoś problem</a></div></footer>
+</body>
+</html>

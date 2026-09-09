@@ -7,13 +7,16 @@
   <meta name="description" content="Download, verify and install ErgenOS 1.0 on a UEFI PC.">
   <meta name="theme-color" content="#030a14">
   <link rel="canonical" href="https://ergenossw.github.io/ErgenOS-Website/installation.html">
+  <link rel="alternate" hreflang="en" href="https://ergenossw.github.io/ErgenOS-Website/installation.html">
+  <link rel="alternate" hreflang="pl" href="https://ergenossw.github.io/ErgenOS-Website/pl/installation.html">
+  <link rel="alternate" hreflang="x-default" href="https://ergenossw.github.io/ErgenOS-Website/installation.html">
   <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
   <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="overrides.css">
 </head>
 <body>
-  <header class="nav-shell"><a class="brand" href="index.html"><img src="assets/ergenos-logo.png" alt=""><span>ErgenOS</span></a><a class="button small" href="index.html#download">Download 1.0</a></header>
+  <header class="nav-shell"><a class="brand" href="index.html"><img src="assets/ergenos-logo.png" alt=""><span>ErgenOS</span></a><div class="header-actions"><div class="language-switcher" aria-label="Language"><span aria-current="page">EN</span><a href="pl/installation.html" lang="pl" hreflang="pl" aria-label="Polski">PL</a></div><a class="button small" href="index.html#download">Download 1.0</a></div></header>
   <main class="page-main">
     <section class="page-hero"><span class="eyebrow">Installation guide</span><h1>From ISO to your desktop.</h1><p class="lead">A short guide for installing ErgenOS 1.0 on a modern UEFI computer.</p></section>
     <section class="page-content">
@@ -23,7 +26,7 @@
         <li><h2>3. Create the installation USB</h2><p>Use Rufus or Etcher on Windows, or GNOME Disks on Linux. Select the downloaded ISO and the correct USB drive. Writing the image erases that USB drive.</p></li>
         <li><h2>4. Boot in UEFI mode</h2><p>Restart the computer, open its boot menu and select the USB drive's UEFI entry. The ErgenOS 1.0 ISO currently requires Secure Boot to be disabled during installation.</p></li>
         <li><h2>5. Install with Calamares</h2><p>Open Install ErgenOS, select your language, keyboard, disk layout and user account, then review the summary before starting installation. Back up important data before changing disk partitions.</p></li>
-        <li><h2>6. Restart and update</h2><p>Remove the USB drive after installation, boot ErgenOS and use ErgenPac to check for system updates. If you want to enable it afterwards, follow the separate <a href="secure-boot.html">Secure Boot setup guide</a>.</p></li>
+        <li><h2>6. Restart, update and check drivers</h2><p>Remove the USB drive, boot ErgenOS and use ErgenPac to install system updates. Open Driver Manager to detect the processor and graphics hardware and install any missing recommended packages. If you want to enable Secure Boot afterwards, follow the separate <a href="secure-boot.html">setup guide</a>.</p></li>
       </ol>
     </section>
   </main>

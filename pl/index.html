@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="pl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>ErgenOS — Twój system. Pełna kontrola.</title>
+  <meta name="description" content="Przystępna dystrybucja oparta na Arch Linux, z graficznymi narzędziami i prostym odzyskiwaniem systemu dzięki migawkom Btrfs.">
+  <meta name="theme-color" content="#030a14">
+  <link rel="canonical" href="https://ergenossw.github.io/ErgenOS-Website/pl/">
+  <link rel="alternate" hreflang="en" href="https://ergenossw.github.io/ErgenOS-Website/">
+  <link rel="alternate" hreflang="pl" href="https://ergenossw.github.io/ErgenOS-Website/pl/">
+  <link rel="alternate" hreflang="x-default" href="https://ergenossw.github.io/ErgenOS-Website/">
+  <meta property="og:title" content="ErgenOS — Twój system. Pełna kontrola.">
+  <meta property="og:description" content="Arch Linux z wygodnym pulpitem, graficznymi narzędziami i migawkami Btrfs.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://ergenossw.github.io/ErgenOS-Website/pl/">
+  <meta property="og:image" content="https://ergenossw.github.io/ErgenOS-Website/assets/social-card.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:locale" content="pl_PL">
+  <meta property="og:locale:alternate" content="en_US">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="ErgenOS — Twój system. Pełna kontrola.">
+  <meta name="twitter:description" content="Arch Linux z wygodnym pulpitem, graficznymi narzędziami i migawkami Btrfs.">
+  <meta name="twitter:image" content="https://ergenossw.github.io/ErgenOS-Website/assets/social-card.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon-32.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="../assets/apple-touch-icon.png">
+  <link rel="stylesheet" href="../style.css">
+  <link rel="stylesheet" href="../overrides.css">
+</head>
+<body>
+  <header class="nav-shell">
+    <a class="brand" href="#top"><img src="../assets/ergenos-logo.png" alt=""><span>ErgenOS</span></a>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="main-nav" aria-label="Otwórz nawigację" data-menu-open="Otwórz nawigację" data-menu-close="Zamknij nawigację"><span></span><span></span><span></span></button>
+    <nav id="main-nav" aria-label="Główna nawigacja"><a href="#features">Dlaczego ErgenOS</a><a href="#apps">Programy</a><a href="#requirements">Wymagania</a><a href="#install">Instalacja</a><a href="#faq">FAQ</a></nav>
+    <div class="header-actions"><div class="language-switcher" aria-label="Język"><a href="../" lang="en" hreflang="en" aria-label="English">EN</a><span aria-current="page">PL</span></div><a class="button small" href="#download">Pobierz 1.0</a></div>
+  </header>
+
+  <main>
+    <section class="hero" id="top">
+      <div class="hero-copy">
+        <a class="release-pill" href="https://github.com/ErgenosSW/ErgenOS-Linux/releases/tag/v1.0.0"><span>Nowość</span> ErgenOS 1.0 jest już dostępny</a>
+        <h1>Twój system.<br><em>Pełna kontrola.</em></h1>
+        <p class="lead">Arch Linux w przystępniejszym wydaniu: dopracowany pulpit GNOME, graficzne zarządzanie oprogramowaniem i łatwy powrót do sprawnego systemu dzięki migawkom Btrfs.</p>
+        <div class="hero-actions"><a class="button" href="#download">Pobierz ErgenOS</a><a class="text-link" href="#features">Zobacz, co potrafi <span>→</span></a></div>
+        <p class="fine-print">Darmowy · Otwarty kod źródłowy · GNOME · x86_64</p>
+      </div>
+      <a class="desktop-shot" href="../assets/screenshots/ergenos-desktop.png" aria-label="Otwórz pełnowymiarowy zrzut pulpitu ErgenOS">
+        <img src="../assets/screenshots/ergenos-desktop.webp" alt="Pulpit ErgenOS 1.0 uruchomiony na fizycznym sprzęcie">
+        <span class="shot-hint">Powiększ zrzut</span>
+      </a>
+    </section>
+
+    <section class="section" id="features">
+      <div class="section-heading"><span class="eyebrow">Dlaczego ErgenOS</span><h2>Arch bez zbędnych komplikacji.</h2><p>ErgenOS daje Ci swobodę Arch Linux, ale upraszcza instalację, aktualizacje i ratowanie systemu, gdy coś pójdzie nie tak.</p></div>
+      <div class="feature-grid">
+        <article><span class="feature-number">01</span><h3>Łatwy powrót do sprawnego systemu</h3><p>Przed i po aktualizacji automatycznie powstają migawki Btrfs. Jeśli coś się zepsuje, możesz uruchomić wcześniejszy stan systemu bezpośrednio z GRUB-a.</p></article>
+        <article><span class="feature-number">02</span><h3>Programy i sterowniki bez grzebania w terminalu</h3><p>ErgenPac łączy repozytoria Archa, opcjonalny Chaotic-AUR i Flathub, a Driver Manager wykrywa brakujące pakiety dla procesora i karty graficznej.</p></article>
+        <article><span class="feature-number">03</span><h3>Gotowy od pierwszego uruchomienia</h3><p>Graficzny instalator, sensowne ustawienia domyślne i ekran powitalny pozwalają szybko przejść od pendrive'a do gotowego pulpitu.</p></article>
+      </div>
+    </section>
+
+    <section class="recovery-band">
+      <div><span class="eyebrow light">Bezpieczne aktualizacje</span><h2>Eksperymentuj śmiało.<br>Zawsze możesz wrócić.</h2></div>
+      <div class="timeline"><span>Migawka przed</span><i></i><span>Aktualizacja systemu</span><i></i><span>Migawka po</span></div>
+      <p>Snapper, snap-pac i grub-btrfs automatycznie dbają o punkty przywracania. Migawki są stałym elementem systemu, a nie ostatnią deską ratunku.</p>
+    </section>
+
+    <section class="section apps-section" id="apps">
+      <div class="section-heading"><span class="eyebrow">Narzędzia ErgenOS</span><h2>Trzy aplikacje. Wszystko pod ręką.</h2></div>
+      <div class="app-grid">
+        <a class="app-card" href="https://github.com/ErgenosSW/ErgenOS-Welcome"><img src="../assets/welcome-logo.png" alt="Logo ErgenOS Welcome"><div><h3>ErgenOS Welcome</h3><p>Najważniejsze informacje o systemie i skróty do przydatnych narzędzi zaraz po instalacji.</p><span class="card-link">Zobacz na GitHubie →</span></div></a>
+        <a class="app-card featured" href="https://github.com/ErgenosSW/ErgenPac"><img src="../assets/ergenpac-logo.png" alt="Logo ErgenPac"><div><h3>ErgenPac</h3><p>Instaluj i aktualizuj programy z repozytoriów Arch Linux oraz Flathuba, a także wykrywaj i uzupełniaj brakujące sterowniki.</p><span class="card-link">Zobacz na GitHubie →</span></div></a>
+        <a class="app-card" href="https://github.com/ErgenosSW/ErgenCTL"><img src="../assets/ergenctl-logo.png" alt="Logo ErgenCTL"><div><h3>ErgenCTL</h3><p>Sprawdzaj stan systemu, analizuj problemy z uruchamianiem i bezpiecznie planuj naprawy.</p><span class="card-link">Zobacz na GitHubie →</span></div></a>
+      </div>
+    </section>
+
+    <section class="section gallery-section" id="screenshots">
+      <div class="section-heading"><span class="eyebrow">ErgenOS w praktyce</span><h2>Tak wygląda gotowy system.</h2><p>Zrzuty pochodzą z ErgenOS 1.0 uruchomionego na prawdziwym komputerze. Pokazują narzędzia dostępne w każdej instalacji.</p></div>
+      <div class="screenshot-grid">
+        <a class="screenshot-card screenshot-wide" href="../assets/screenshots/ergenpac-search.png"><img src="../assets/screenshots/ergenpac-search.webp" alt="ErgenPac wyświetlający pakiet z repozytorium ErgenOS" loading="lazy"><span><strong>Znajduj programy i zarządzaj nimi</strong><small>ErgenPac</small></span></a>
+        <a class="screenshot-card" href="../assets/screenshots/ergenctl-system-check.png"><img src="../assets/screenshots/ergenctl-system-check.webp" alt="ErgenCTL wyświetlający pomyślne testy systemu" loading="lazy"><span><strong>Sprawdź kondycję systemu</strong><small>ErgenCTL</small></span></a>
+        <a class="screenshot-card" href="../assets/screenshots/ergenos-welcome.png"><img src="../assets/screenshots/ergenos-welcome.webp" alt="ErgenOS Welcome ze skrótami do ErgenPac i ErgenCTL" loading="lazy"><span><strong>Wszystko, czego potrzebujesz na start</strong><small>ErgenOS Welcome</small></span></a>
+      </div>
+    </section>
+
+    <section class="section requirements-section" id="requirements">
+      <div class="section-heading"><span class="eyebrow">Wymagania sprzętowe</span><h2>Sprawdź, czy Twój komputer da radę.</h2><p>ErgenOS działa na współczesnych komputerach 64-bitowych korzystających z UEFI.</p></div>
+      <div class="requirements-grid">
+        <article><span>Procesor</span><h3>Procesor x86_64</h3><p>Dowolny współczesny 64-bitowy procesor Intel lub AMD.</p></article>
+        <article><span>Pamięć RAM</span><h3>Zalecane 4 GB</h3><p>Po zalogowaniu świeża instalacja ErgenOS zużywa około 1,6 GB pamięci RAM.</p></article>
+        <article><span>Miejsce na dysku</span><h3>Zalecane 40 GB</h3><p>Warto zostawić dodatkowe miejsce na programy i migawki Btrfs.</p></article>
+        <article><span>Tryb uruchamiania</span><h3>UEFI</h3><p>ErgenOS 1.0 instaluje się i uruchamia w trybie UEFI.</p></article>
+      </div>
+      <div class="hardware-notes">
+        <p><strong>Secure Boot:</strong> po instalacji systemu możesz włączyć eksperymentalną obsługę opartą na shim podpisanym przez Microsoft i własnym kluczu MOK. Szczegóły znajdziesz w <a href="secure-boot.html">poradniku Secure Boot</a>.</p>
+        <p><strong>NVIDIA:</strong> po instalacji systemu Driver Manager w ErgenPac wykrywa obsługiwane współczesne karty NVIDIA i instaluje zalecany oficjalny zestaw sterowników. Starsze lub nierozpoznane modele wymagają ręcznego wyboru, dzięki czemu program nie zainstaluje niezgodnego sterownika.</p>
+      </div>
+    </section>
+
+    <section class="section install-section" id="install">
+      <div class="section-heading"><span class="eyebrow">Prosta instalacja</span><h2>Trzy kroki i gotowe.</h2></div>
+      <ol class="steps">
+        <li><span>1</span><div><h3>Pobierz ISO</h3><p>Pobierz obraz ErgenOS 1.0 i sprawdź jego sumę kontrolną.</p></div></li>
+        <li><span>2</span><div><h3>Nagraj pendrive</h3><p>Użyj Rufusa, Etchera lub innego sprawdzonego narzędzia.</p></div></li>
+        <li><span>3</span><div><h3>Zainstaluj system</h3><p>Uruchom komputer z pendrive'a i wykonaj kolejne kroki w instalatorze Calamares.</p></div></li>
+      </ol>
+      <a class="text-link guide-link" href="installation.html">Przeczytaj pełny poradnik instalacji <span>→</span></a>
+    </section>
+
+    <section class="download" id="download">
+      <div><span class="eyebrow light">ErgenOS 1.0</span><h2>Twój komputer. Twoje zasady.</h2></div>
+      <div class="download-actions"><a class="button white" href="https://www.mediafire.com/file/exl8cdtpnw7rc9h/ergenos-1.0.0-x86_64.iso/file">Pobierz ISO</a><a href="https://github.com/ErgenosSW/ErgenOS-Linux/releases/tag/v1.0.0">Wydanie na GitHubie →</a><div class="release-meta"><span>2,50 GiB</span><span>Wydano 7 września 2026</span><span>Plik na MediaFire</span></div><div class="checksum"><span>SHA-256</span><code id="iso-checksum">236e9f6a411915e67a6800cb67cf5939cba6d30d399363c9a250186f32cba754</code><button type="button" data-copy-checksum data-copy-success="Skopiowano" data-copy-reset="Kopiuj">Kopiuj</button></div></div>
+    </section>
+
+    <section class="section faq" id="faq">
+      <div class="section-heading"><span class="eyebrow">FAQ</span><h2>Najczęstsze pytania.</h2></div>
+      <div class="faq-list">
+        <details><summary>Czym jest ErgenOS?</summary><p>ErgenOS to niezależna dystrybucja oparta na Arch Linux. Łączy pulpit GNOME, autorskie narzędzia graficzne i łatwe odzyskiwanie systemu za pomocą migawek Btrfs.</p></details>
+        <details><summary>Czy ErgenOS jest dystrybucją dla graczy?</summary><p>Jeszcze nie. Rozwiązania dla graczy są częścią dalszych planów, ale ErgenOS 1.0 pozostaje uniwersalnym systemem do codziennego użytku.</p></details>
+        <details><summary>Jak dostarczane są aktualizacje?</summary><p>Pakiety Archa pochodzą ze standardowych repozytoriów Arch Linux. Aplikacje ErgenOS są dostarczane przez podpisane repozytorium ErgenOS i obsługiwane przez Pacmana lub ErgenPac.</p></details>
+        <details><summary>Czy mogę korzystać z AUR?</summary><p>Tak. Podczas instalacji możesz pozostać przy oficjalnych repozytoriach albo włączyć yay, paru lub Chaotic-AUR.</p></details>
+        <details><summary>Czy ErgenOS obsługuje Secure Boot?</summary><p>Eksperymentalne wsparcie po instalacji jest dostępne przez podpisane repozytorium ErgenOS. Obecne ISO musi zostać zainstalowane przy wyłączonym Secure Boot; po instalacji skorzystaj z <a href="secure-boot.html">poradnika konfiguracji Secure Boot</a>.</p></details>
+      </div>
+    </section>
+  </main>
+
+  <footer><a class="brand" href="#top"><img src="../assets/ergenos-logo.png" alt=""><span>ErgenOS</span></a><p>Niezależny. Otwarty. Dopracowany.</p><div><a href="installation.html">Instalacja</a><a href="known-limitations.html">Znane ograniczenia</a><a href="https://github.com/ErgenosSW">GitHub</a><a href="https://github.com/ErgenosSW/ErgenOS-Linux/issues">Zgłoś problem</a><a href="https://github.com/ErgenosSW/ErgenOS-Linux/blob/main/LICENSE">Licencja</a></div></footer>
+  <script src="../script.js"></script>
+</body>
+</html>

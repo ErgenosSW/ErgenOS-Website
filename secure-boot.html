@@ -7,13 +7,16 @@
   <meta name="description" content="Configure experimental Secure Boot support on an installed ErgenOS system using shim and a Machine Owner Key.">
   <meta name="theme-color" content="#030a14">
   <link rel="canonical" href="https://ergenossw.github.io/ErgenOS-Website/secure-boot.html">
+  <link rel="alternate" hreflang="en" href="https://ergenossw.github.io/ErgenOS-Website/secure-boot.html">
+  <link rel="alternate" hreflang="pl" href="https://ergenossw.github.io/ErgenOS-Website/pl/secure-boot.html">
+  <link rel="alternate" hreflang="x-default" href="https://ergenossw.github.io/ErgenOS-Website/secure-boot.html">
   <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
   <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="overrides.css">
 </head>
 <body>
-  <header class="nav-shell"><a class="brand" href="index.html"><img src="assets/ergenos-logo.png" alt=""><span>ErgenOS</span></a><a class="button small" href="index.html#download">Download 1.0</a></header>
+  <header class="nav-shell"><a class="brand" href="index.html"><img src="assets/ergenos-logo.png" alt=""><span>ErgenOS</span></a><div class="header-actions"><div class="language-switcher" aria-label="Language"><span aria-current="page">EN</span><a href="pl/secure-boot.html" lang="pl" hreflang="pl" aria-label="Polski">PL</a></div><a class="button small" href="index.html#download">Download 1.0</a></div></header>
   <main class="page-main">
     <section class="page-hero"><span class="eyebrow">Experimental support</span><h1>Secure Boot setup.</h1><p class="lead">ErgenOS can use Microsoft-signed shim and your own Machine Owner Key without replacing the firmware keys.</p></section>
     <section class="page-content">
@@ -32,7 +35,7 @@ sudo ergenos-secureboot check
 mokutil --sb-state</code></pre><p>The expected state is <strong>active</strong>, and mokutil should report <strong>SecureBoot enabled</strong>.</p></li>
       </ol>
       <div class="hardware-notes">
-        <p><strong>After updates:</strong> packaged hooks handle kernel and GRUB updates automatically. After installing or updating an out-of-tree DKMS driver, such as an NVIDIA driver or Broadcom Wi-Fi module, run <code>sudo ergenos-secureboot refresh</code> and verify the result with <code>sudo ergenos-secureboot check</code>.</p>
+        <p><strong>After updates:</strong> packaged hooks handle kernel and GRUB updates automatically. ErgenPac Driver Manager also refreshes ErgenOS Secure Boot after installing DKMS drivers. For a DKMS driver installed by another method, such as an NVIDIA or Broadcom Wi-Fi module, run <code>sudo ergenos-secureboot refresh</code> and verify the result with <code>sudo ergenos-secureboot check</code>.</p>
         <p><strong>Need to remove it?</strong> First run <code>sudo ergenos-secureboot remove-mok</code>, confirm removal in MokManager, disable Secure Boot in the firmware, and then run <code>sudo ergenos-secureboot disable</code>. The package blocks unsafe removal while support is still active.</p>
       </div>
     </section>
