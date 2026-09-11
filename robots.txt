@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://ergenossw.github.io/ErgenOS-Website/sitemap.xml

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://ergenossw.github.io/ErgenOS-Website/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ergenossw.github.io/ErgenOS-Website/" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://ergenossw.github.io/ErgenOS-Website/pl/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ergenossw.github.io/ErgenOS-Website/" />
+  </url>
+  <url>
+    <loc>https://ergenossw.github.io/ErgenOS-Website/pl/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ergenossw.github.io/ErgenOS-Website/" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://ergenossw.github.io/ErgenOS-Website/pl/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ergenossw.github.io/ErgenOS-Website/" />
+  </url>
+  <url>
+    <loc>https://ergenossw.github.io/ErgenOS-Website/installation.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ergenossw.github.io/ErgenOS-Website/installation.html" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://ergenossw.github.io/ErgenOS-Website/pl/installation.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ergenossw.github.io/ErgenOS-Website/installation.html" />
+  </url>
+  <url>
+    <loc>https://ergenossw.github.io/ErgenOS-Website/pl/installation.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ergenossw.github.io/ErgenOS-Website/installation.html" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://ergenossw.github.io/ErgenOS-Website/pl/installation.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ergenossw.github.io/ErgenOS-Website/installation.html" />
+  </url>
+  <url>
+    <loc>https://ergenossw.github.io/ErgenOS-Website/known-limitations.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ergenossw.github.io/ErgenOS-Website/known-limitations.html" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://ergenossw.github.io/ErgenOS-Website/pl/known-limitations.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ergenossw.github.io/ErgenOS-Website/known-limitations.html" />
+  </url>
+  <url>
+    <loc>https://ergenossw.github.io/ErgenOS-Website/pl/known-limitations.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ergenossw.github.io/ErgenOS-Website/known-limitations.html" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://ergenossw.github.io/ErgenOS-Website/pl/known-limitations.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ergenossw.github.io/ErgenOS-Website/known-limitations.html" />
+  </url>
+  <url>
+    <loc>https://ergenossw.github.io/ErgenOS-Website/secure-boot.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ergenossw.github.io/ErgenOS-Website/secure-boot.html" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://ergenossw.github.io/ErgenOS-Website/pl/secure-boot.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ergenossw.github.io/ErgenOS-Website/secure-boot.html" />
+  </url>
+  <url>
+    <loc>https://ergenossw.github.io/ErgenOS-Website/pl/secure-boot.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ergenossw.github.io/ErgenOS-Website/secure-boot.html" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://ergenossw.github.io/ErgenOS-Website/pl/secure-boot.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ergenossw.github.io/ErgenOS-Website/secure-boot.html" />
+  </url>
+</urlset>
