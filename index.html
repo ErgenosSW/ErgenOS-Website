@@ -69,7 +69,7 @@
       <div class="app-grid">
         <a class="app-card" href="https://github.com/ErgenosSW/ErgenOS-Welcome"><img src="assets/welcome-logo.png" alt="ErgenOS Welcome icon"><div><h3>ErgenOS Welcome</h3><p>Your starting point after installation, with system information and shortcuts to essential tools.</p><span class="card-link">View on GitHub →</span></div></a>
         <a class="app-card featured" href="https://github.com/ErgenosSW/ErgenPac"><img src="assets/ergenpac-logo.png" alt="ErgenPac icon"><div><h3>ErgenPac</h3><p>Search, install and update software from Arch Linux and Flathub, then detect and install the recommended hardware driver packages.</p><span class="card-link">View on GitHub →</span></div></a>
-        <a class="app-card" href="https://github.com/ErgenosSW/ErgenCTL"><img src="assets/ergenctl-logo.png" alt="ErgenCTL icon"><div><h3>ErgenCTL</h3><p>Diagnose the installation, inspect boot logs, check snapshots and plan safe repairs.</p><span class="card-link">View on GitHub →</span></div></a>
+        <a class="app-card" href="https://github.com/ErgenosSW/ErgenCTL"><img src="assets/ergenctl-logo.png" alt="ErgenCTL icon"><div><h3>ErgenCTL</h3><p>Diagnose the installation, inspect boot logs, recover snapshots and configure Secure Boot through a guided checklist.</p><span class="card-link">View on GitHub →</span></div></a>
       </div>
     </section>
 
@@ -100,7 +100,7 @@
         <article><span>Firmware</span><h3>UEFI</h3><p>ErgenOS 1.0 is designed for installation in UEFI mode.</p></article>
       </div>
       <div class="hardware-notes">
-        <p><strong>Secure Boot:</strong> experimental post-install support is available through Microsoft-signed shim and a Machine Owner Key. See the <a href="secure-boot.html">Secure Boot setup guide</a>.</p>
+        <p><strong>Secure Boot:</strong> ErgenCTL now provides guided post-install setup using Microsoft-signed shim and a Machine Owner Key. See the <a href="secure-boot.html">Secure Boot setup guide</a>.</p>
         <p><strong>NVIDIA:</strong> after installation, ErgenPac Driver Manager detects supported modern NVIDIA hardware and installs the recommended official driver stack. Legacy or unrecognized generations are flagged for manual selection to avoid installing an incompatible driver.</p>
       </div>
     </section>
@@ -127,7 +127,7 @@
         <details><summary>Is ErgenOS a gaming distribution?</summary><p>Not yet. Gaming-oriented features are part of the long-term direction, but ErgenOS 1.0 is a general-purpose desktop system.</p></details>
         <details><summary>How are updates delivered?</summary><p>Arch packages come from the standard Arch repositories. ErgenOS applications are distributed through the signed ErgenOS repository and handled by Pacman or ErgenPac.</p></details>
         <details><summary>Can I use the AUR?</summary><p>Yes. During installation you can stay with official repositories or configure yay, paru or Chaotic-AUR.</p></details>
-        <details><summary>Does ErgenOS support Secure Boot?</summary><p>Experimental post-install support is available through the signed ErgenOS repository. The current ISO must be installed with Secure Boot disabled; follow the <a href="secure-boot.html">Secure Boot setup guide</a> after installation.</p></details>
+        <details><summary>Does ErgenOS support Secure Boot?</summary><p>Experimental post-install support is available through ErgenCTL and the signed ErgenOS repository. The current ISO must be installed with Secure Boot disabled; follow the <a href="secure-boot.html">Secure Boot setup guide</a> after installation.</p></details>
       </div>
     </section>
   </main>

@@ -25,18 +25,17 @@
         <p><strong>Test coverage:</strong> this workflow has been validated with QEMU/OVMF and on a physical Lenovo ThinkPad. Firmware interfaces differ between manufacturers, so keep your firmware recovery options and important data available.</p>
       </div>
       <ol class="guide-steps">
-        <li><h2>1. Update ErgenOS and install the tool</h2><p>Install the signed package from the official ErgenOS repository.</p><code>sudo pacman -Syu ergenos-secureboot</code></li>
-        <li><h2>2. Run the safety check</h2><p>Confirm that the system uses UEFI, the EFI System Partition is available and all required components can be prepared.</p><code>sudo ergenos-secureboot enable --dry-run</code><p>Continue only when the command reports that the preflight check passed.</p></li>
-        <li><h2>3. Prepare Secure Boot</h2><p>Create the ErgenOS Machine Owner Key, sign the kernel, GRUB and installed DKMS modules, and create the separate ErgenOS Secure Boot entry.</p><code>sudo ergenos-secureboot enable</code><p>Choose a temporary enrollment password when prompted. It is used only once by MokManager during the next boot; it is not your system password and it does not replace or expose the private signing key.</p></li>
+        <li><h2>1. Update ErgenOS and install the tools</h2><p>Install the current ErgenCTL and Secure Boot backend from the signed ErgenOS repository.</p><code>sudo pacman -Syu ergenctl ergenos-secureboot</code></li>
+        <li><h2>2. Check readiness in ErgenCTL</h2><p>Open <strong>ErgenCTL</strong>, switch to <strong>Secure Boot</strong> and select <strong>Check readiness</strong>. This checks UEFI mode, the EFI System Partition and the required boot components without changing the system.</p></li>
+        <li><h2>3. Prepare Secure Boot</h2><p>Select <strong>Set up Secure Boot</strong>, enter a one-time MOK password twice and approve the system authentication dialog. ErgenCTL creates the signing key, signs GRUB, installed kernels and DKMS modules, and creates the separate ErgenOS Secure Boot entry.</p><p>The MOK password is used only once during the next boot. It is not your system password and does not replace or expose the private signing key.</p></li>
         <li><h2>4. Enrol the Machine Owner Key</h2><p>Restart through the <strong>ErgenOS Secure Boot</strong> entry. In MokManager choose <strong>Enroll MOK</strong>, continue, confirm the key and enter the temporary password from the previous step. Then reboot.</p></li>
         <li><h2>5. Enable Secure Boot in the firmware</h2><p>Open the computer's UEFI settings and enable Secure Boot in its standard or default-key mode. Do not clear or replace the platform keys. Save the settings and boot <strong>ErgenOS Secure Boot</strong>.</p></li>
-        <li><h2>6. Verify the result</h2><p>Complete configuration and verify the entire boot chain.</p><pre><code>sudo ergenos-secureboot finalize
-sudo ergenos-secureboot check
-mokutil --sb-state</code></pre><p>The expected state is <strong>active</strong>, and mokutil should report <strong>SecureBoot enabled</strong>.</p></li>
+        <li><h2>6. Verify the result</h2><p>Return to <strong>ErgenCTL → Secure Boot</strong> and select <strong>Check status</strong>. The page verifies nine parts of the setup separately. When everything is working, all checks are complete and the page reports that Secure Boot is active.</p></li>
       </ol>
       <div class="hardware-notes">
+        <p><strong>Prefer the terminal?</strong> The complete CLI remains available. Use <code>sudo ergenos-secureboot enable --dry-run</code>, then <code>sudo ergenos-secureboot enable</code>. After enrollment and firmware activation, verify with <code>sudo ergenos-secureboot check</code> and <code>mokutil --sb-state</code>.</p>
         <p><strong>After updates:</strong> packaged hooks handle kernel and GRUB updates automatically. ErgenPac Driver Manager also refreshes ErgenOS Secure Boot after installing DKMS drivers. For a DKMS driver installed by another method, such as an NVIDIA or Broadcom Wi-Fi module, run <code>sudo ergenos-secureboot refresh</code> and verify the result with <code>sudo ergenos-secureboot check</code>.</p>
-        <p><strong>Need to remove it?</strong> First run <code>sudo ergenos-secureboot remove-mok</code>, confirm removal in MokManager, disable Secure Boot in the firmware, and then run <code>sudo ergenos-secureboot disable</code>. The package blocks unsafe removal while support is still active.</p>
+        <p><strong>Need to remove it?</strong> Open <strong>Maintenance and removal</strong> on the Secure Boot page and follow the displayed steps. The same process is available with <code>remove-mok</code> and <code>disable</code> in the terminal. The package blocks unsafe removal while support is still active.</p>
       </div>
     </section>
   </main>

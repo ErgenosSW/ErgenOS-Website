@@ -25,18 +25,17 @@
         <p><strong>Na czym to sprawdziliśmy:</strong> procedura działa na QEMU/OVMF oraz fizycznym Lenovo ThinkPadzie. Ustawienia UEFI różnią się w zależności od producenta, dlatego przed rozpoczęciem zabezpiecz ważne dane.</p>
       </div>
       <ol class="guide-steps">
-        <li><h2>1. Zaktualizuj ErgenOS i zainstaluj narzędzie</h2><p>Zainstaluj podpisany pakiet z oficjalnego repozytorium ErgenOS.</p><code>sudo pacman -Syu ergenos-secureboot</code></li>
-        <li><h2>2. Sprawdź, czy system jest gotowy</h2><p>Narzędzie sprawdzi tryb UEFI, dostępność partycji EFI i wszystkie potrzebne składniki.</p><code>sudo ergenos-secureboot enable --dry-run</code><p>Przejdź dalej tylko wtedy, gdy test zakończy się powodzeniem.</p></li>
-        <li><h2>3. Przygotuj Secure Boot</h2><p>Utwórz ErgenOS Machine Owner Key, podpisz jądro, GRUB i zainstalowane moduły DKMS oraz utwórz osobną pozycję ErgenOS Secure Boot.</p><code>sudo ergenos-secureboot enable</code><p>Po wyświetleniu monitu wybierz tymczasowe hasło rejestracji. Zostanie użyte tylko raz przez MokManager podczas następnego uruchomienia; nie jest to hasło systemowe i nie zastępuje ani nie ujawnia prywatnego klucza podpisującego.</p></li>
+        <li><h2>1. Zaktualizuj system i zainstaluj narzędzia</h2><p>Z podpisanego repozytorium ErgenOS pobierz najnowszy ErgenCTL razem z modułem obsługującym Secure Boot.</p><code>sudo pacman -Syu ergenctl ergenos-secureboot</code></li>
+        <li><h2>2. Uruchom test gotowości</h2><p>Otwórz <strong>ErgenCTL</strong>, przejdź do zakładki <strong>Secure Boot</strong> i kliknij <strong>Check readiness</strong>. Program bez wprowadzania zmian sprawdzi tryb UEFI, partycję EFI i potrzebne składniki rozruchowe.</p></li>
+        <li><h2>3. Przygotuj Secure Boot</h2><p>Kliknij <strong>Set up Secure Boot</strong>, dwukrotnie wpisz jednorazowe hasło MOK i zatwierdź systemowe okno uwierzytelniania. ErgenCTL utworzy klucz, podpisze GRUB, jądra i moduły DKMS, a następnie doda osobną pozycję ErgenOS Secure Boot.</p><p>Hasło MOK będzie potrzebne tylko raz, przy następnym uruchomieniu. Nie jest to hasło do konta i nie ma dostępu do prywatnego klucza podpisującego.</p></li>
         <li><h2>4. Dodaj klucz MOK</h2><p>Uruchom komputer ponownie przez pozycję <strong>ErgenOS Secure Boot</strong>. W MokManager wybierz <strong>Enroll MOK</strong>, potwierdź klucz i wpisz tymczasowe hasło z poprzedniego kroku. Następnie uruchom komputer ponownie.</p></li>
         <li><h2>5. Włącz Secure Boot w firmware</h2><p>Otwórz ustawienia UEFI komputera i włącz Secure Boot w trybie standardowym lub z domyślnymi kluczami. Nie usuwaj ani nie zastępuj kluczy platformy. Zapisz ustawienia i uruchom pozycję <strong>ErgenOS Secure Boot</strong>.</p></li>
-        <li><h2>6. Zweryfikuj wynik</h2><p>Dokończ konfigurację i sprawdź cały łańcuch rozruchowy.</p><pre><code>sudo ergenos-secureboot finalize
-sudo ergenos-secureboot check
-mokutil --sb-state</code></pre><p>Oczekiwany stan to <strong>active</strong>, a mokutil powinien wyświetlić <strong>SecureBoot enabled</strong>.</p></li>
+        <li><h2>6. Sprawdź, czy wszystko działa</h2><p>Wróć do zakładki <strong>Secure Boot</strong> w ErgenCTL i kliknij <strong>Check status</strong>. Program osobno sprawdzi dziewięć elementów konfiguracji. Jeśli wszystkie są gotowe, zobaczysz informację, że Secure Boot jest aktywny.</p></li>
       </ol>
       <div class="hardware-notes">
+        <p><strong>Wolisz terminal?</strong> Nadal możesz przejść cały proces ręcznie. Zacznij od <code>sudo ergenos-secureboot enable --dry-run</code>, a następnie wykonaj <code>sudo ergenos-secureboot enable</code>. Po dodaniu klucza MOK i włączeniu funkcji w UEFI sprawdź wynik przez <code>sudo ergenos-secureboot check</code> oraz <code>mokutil --sb-state</code>.</p>
         <p><strong>Po aktualizacjach:</strong> dołączone hooki automatycznie obsługują aktualizacje jądra i GRUB-a. Driver Manager w ErgenPac odświeża też ErgenOS Secure Boot po instalacji sterowników DKMS. Jeśli zainstalujesz moduł DKMS inną metodą, na przykład sterownik NVIDIA albo moduł Wi-Fi Broadcom, wykonaj <code>sudo ergenos-secureboot refresh</code> i sprawdź wynik poleceniem <code>sudo ergenos-secureboot check</code>.</p>
-        <p><strong>Chcesz usunąć konfigurację?</strong> Najpierw wykonaj <code>sudo ergenos-secureboot remove-mok</code>, potwierdź usunięcie w MokManager, wyłącz Secure Boot w firmware, a następnie wykonaj <code>sudo ergenos-secureboot disable</code>. Pakiet blokuje niebezpieczne usunięcie, dopóki obsługa pozostaje aktywna.</p>
+        <p><strong>Chcesz wyłączyć obsługę?</strong> Rozwiń sekcję <strong>Maintenance and removal</strong> w ErgenCTL i wykonaj pokazane tam kroki. Ten sam proces jest dostępny w terminalu przez polecenia <code>remove-mok</code> i <code>disable</code>. Pakiet nie pozwoli usunąć się w sposób, który mógłby unieruchomić system.</p>
       </div>
     </section>
   </main>

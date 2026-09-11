@@ -71,7 +71,7 @@
       <div class="app-grid">
         <a class="app-card" href="https://github.com/ErgenosSW/ErgenOS-Welcome"><img src="../assets/welcome-logo.png" alt="Logo ErgenOS Welcome"><div><h3>ErgenOS Welcome</h3><p>Najważniejsze informacje o systemie i skróty do przydatnych narzędzi zaraz po instalacji.</p><span class="card-link">Zobacz na GitHubie →</span></div></a>
         <a class="app-card featured" href="https://github.com/ErgenosSW/ErgenPac"><img src="../assets/ergenpac-logo.png" alt="Logo ErgenPac"><div><h3>ErgenPac</h3><p>Instaluj i aktualizuj programy z repozytoriów Arch Linux oraz Flathuba, a także wykrywaj i uzupełniaj brakujące sterowniki.</p><span class="card-link">Zobacz na GitHubie →</span></div></a>
-        <a class="app-card" href="https://github.com/ErgenosSW/ErgenCTL"><img src="../assets/ergenctl-logo.png" alt="Logo ErgenCTL"><div><h3>ErgenCTL</h3><p>Sprawdzaj stan systemu, analizuj problemy z uruchamianiem i bezpiecznie planuj naprawy.</p><span class="card-link">Zobacz na GitHubie →</span></div></a>
+        <a class="app-card" href="https://github.com/ErgenosSW/ErgenCTL"><img src="../assets/ergenctl-logo.png" alt="Logo ErgenCTL"><div><h3>ErgenCTL</h3><p>Sprawdzaj stan systemu, analizuj problemy z uruchamianiem, przywracaj migawki i skonfiguruj Secure Boot krok po kroku.</p><span class="card-link">Zobacz na GitHubie →</span></div></a>
       </div>
     </section>
 
@@ -93,7 +93,7 @@
         <article><span>Tryb uruchamiania</span><h3>UEFI</h3><p>ErgenOS 1.0 instaluje się i uruchamia w trybie UEFI.</p></article>
       </div>
       <div class="hardware-notes">
-        <p><strong>Secure Boot:</strong> po instalacji systemu możesz włączyć eksperymentalną obsługę opartą na shim podpisanym przez Microsoft i własnym kluczu MOK. Szczegóły znajdziesz w <a href="secure-boot.html">poradniku Secure Boot</a>.</p>
+        <p><strong>Secure Boot:</strong> ErgenCTL przeprowadzi Cię przez konfigurację po instalacji systemu, korzystając z shim podpisanego przez Microsoft i własnego klucza MOK. Szczegóły znajdziesz w <a href="secure-boot.html">poradniku Secure Boot</a>.</p>
         <p><strong>NVIDIA:</strong> po instalacji systemu Driver Manager w ErgenPac wykrywa obsługiwane współczesne karty NVIDIA i instaluje zalecany oficjalny zestaw sterowników. Starsze lub nierozpoznane modele wymagają ręcznego wyboru, dzięki czemu program nie zainstaluje niezgodnego sterownika.</p>
       </div>
     </section>
@@ -120,7 +120,7 @@
         <details><summary>Czy ErgenOS jest dystrybucją dla graczy?</summary><p>Jeszcze nie. Rozwiązania dla graczy są częścią dalszych planów, ale ErgenOS 1.0 pozostaje uniwersalnym systemem do codziennego użytku.</p></details>
         <details><summary>Jak dostarczane są aktualizacje?</summary><p>Pakiety Archa pochodzą ze standardowych repozytoriów Arch Linux. Aplikacje ErgenOS są dostarczane przez podpisane repozytorium ErgenOS i obsługiwane przez Pacmana lub ErgenPac.</p></details>
         <details><summary>Czy mogę korzystać z AUR?</summary><p>Tak. Podczas instalacji możesz pozostać przy oficjalnych repozytoriach albo włączyć yay, paru lub Chaotic-AUR.</p></details>
-        <details><summary>Czy ErgenOS obsługuje Secure Boot?</summary><p>Eksperymentalne wsparcie po instalacji jest dostępne przez podpisane repozytorium ErgenOS. Obecne ISO musi zostać zainstalowane przy wyłączonym Secure Boot; po instalacji skorzystaj z <a href="secure-boot.html">poradnika konfiguracji Secure Boot</a>.</p></details>
+        <details><summary>Czy ErgenOS obsługuje Secure Boot?</summary><p>Tak, eksperymentalnie po instalacji. ErgenCTL prowadzi przez cały proces, a potrzebne pakiety pochodzą z podpisanego repozytorium ErgenOS. Obecne ISO nadal wymaga wyłączenia Secure Boot na czas instalacji; później skorzystaj z <a href="secure-boot.html">poradnika konfiguracji</a>.</p></details>
       </div>
     </section>
   </main>
