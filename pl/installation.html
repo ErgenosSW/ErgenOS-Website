@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>Poradnik instalacji — ErgenOS</title>
-  <meta name="description" content="Dowiedz się, jak pobrać, sprawdzić i zainstalować ErgenOS 1.0 na komputerze z UEFI.">
+  <meta name="description" content="Dowiedz się, jak pobrać, sprawdzić i zainstalować ErgenOS 1.1 na komputerze z UEFI.">
   <meta name="robots" content="index,follow,max-image-preview:large">
   <meta name="theme-color" content="#030a14">
   <link rel="canonical" href="https://ergenossw.github.io/ErgenOS-Website/pl/installation.html">
@@ -17,15 +17,15 @@
   <link rel="stylesheet" href="../overrides.css">
 </head>
 <body>
-  <header class="nav-shell"><a class="brand" href="index.html"><img src="../assets/ergenos-logo.png" alt=""><span>ErgenOS</span></a><div class="header-actions"><div class="language-switcher" aria-label="Język"><a href="../installation.html" lang="en" hreflang="en" aria-label="English">EN</a><span aria-current="page">PL</span></div><a class="button small" href="index.html#download">Pobierz 1.0</a></div></header>
+  <header class="nav-shell"><a class="brand" href="index.html"><img src="../assets/ergenos-logo.png" alt=""><span>ErgenOS</span></a><div class="header-actions"><div class="language-switcher" aria-label="Język"><a href="../installation.html" lang="en" hreflang="en" aria-label="English">EN</a><span aria-current="page">PL</span></div><a class="button small" href="index.html#download">Pobierz 1.1</a></div></header>
   <main class="page-main">
     <section class="page-hero"><span class="eyebrow">Poradnik instalacji</span><h1>Zainstaluj ErgenOS krok po kroku.</h1><p class="lead">Od pobrania obrazu ISO aż do pierwszego uruchomienia gotowego systemu.</p></section>
     <section class="page-content">
       <ol class="guide-steps">
-        <li><h2>1. Pobierz ISO</h2><p>Pobierz ErgenOS 1.0 z oficjalnej strony. Plik ma rozmiar 2,50 GiB.</p></li>
-        <li><h2>2. Sprawdź pobrany plik</h2><p>Zanim nagrasz pendrive, sprawdź sumę SHA-256 obrazu. Dzięki temu upewnisz się, że plik został pobrany prawidłowo.</p><code>echo "236e9f6a411915e67a6800cb67cf5939cba6d30d399363c9a250186f32cba754  ergenos-1.0.0-x86_64.iso" | sha256sum -c -</code></li>
+        <li><h2>1. Pobierz części ISO</h2><p>Pobierz obie ponumerowane części ISO oraz <code>SHA256SUMS-1.1.0</code> z wydania ErgenOS 1.1 na GitHubie, a następnie połącz je poleceniem <code>cat ergenos-1.1.0-x86_64.iso.part-* &gt; ergenos-1.1.0-x86_64.iso</code>. Kompletny obraz ma 2,51 GiB.</p></li>
+        <li><h2>2. Sprawdź pobrany plik</h2><p>Zanim nagrasz pendrive, sprawdź sumę SHA-256 obrazu. Dzięki temu upewnisz się, że plik został pobrany prawidłowo.</p><code>echo "460c2ab349681cef4922ebba35b180b24f7a17e7182dbf23cc7c99b13b1fdcce  ergenos-1.1.0-x86_64.iso" | sha256sum -c -</code></li>
         <li><h2>3. Nagraj pendrive</h2><p>W Windowsie użyj Rufusa lub Etchera, a w Linuksie na przykład Dysków GNOME. Wskaż pobrany obraz oraz właściwy pendrive. Uwaga: nagranie obrazu usunie z niego wszystkie dane.</p></li>
-        <li><h2>4. Uruchom komputer z USB</h2><p>Uruchom komputer ponownie, wejdź do menu rozruchu i wybierz pendrive w trybie UEFI. Na czas instalacji ErgenOS 1.0 wyłącz Secure Boot.</p></li>
+        <li><h2>4. Uruchom komputer z USB</h2><p>Uruchom komputer ponownie, wejdź do menu rozruchu i wybierz pendrive w trybie UEFI. Na czas instalacji ErgenOS 1.1 wyłącz Secure Boot.</p></li>
         <li><h2>5. Przejdź przez instalator</h2><p>Uruchom Instalator ErgenOS i wybierz język, układ klawiatury, podział dysku oraz konto użytkownika. Przed rozpoczęciem instalacji dokładnie sprawdź podsumowanie. Jeżeli na dysku masz ważne dane, najpierw wykonaj ich kopię zapasową.</p></li>
         <li><h2>6. Zaktualizuj system i sprawdź sterowniki</h2><p>Po zakończeniu instalacji odłącz pendrive i uruchom ErgenOS. W ErgenPac zainstaluj aktualizacje, a następnie otwórz Driver Manager. Program wykryje procesor i kartę graficzną oraz zaproponuje brakujące pakiety. Secure Boot możesz skonfigurować później według <a href="secure-boot.html">osobnego poradnika</a>.</p></li>
       </ol>

@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>Installation guide — ErgenOS</title>
-  <meta name="description" content="Download, verify and install ErgenOS 1.0 on a UEFI PC.">
+  <meta name="description" content="Download, verify and install ErgenOS 1.1 on a UEFI PC.">
   <meta name="robots" content="index,follow,max-image-preview:large">
   <meta name="theme-color" content="#030a14">
   <link rel="canonical" href="https://ergenossw.github.io/ErgenOS-Website/installation.html">
@@ -17,15 +17,15 @@
   <link rel="stylesheet" href="overrides.css">
 </head>
 <body>
-  <header class="nav-shell"><a class="brand" href="index.html"><img src="assets/ergenos-logo.png" alt=""><span>ErgenOS</span></a><div class="header-actions"><div class="language-switcher" aria-label="Language"><span aria-current="page">EN</span><a href="pl/installation.html" lang="pl" hreflang="pl" aria-label="Polski">PL</a></div><a class="button small" href="index.html#download">Download 1.0</a></div></header>
+  <header class="nav-shell"><a class="brand" href="index.html"><img src="assets/ergenos-logo.png" alt=""><span>ErgenOS</span></a><div class="header-actions"><div class="language-switcher" aria-label="Language"><span aria-current="page">EN</span><a href="pl/installation.html" lang="pl" hreflang="pl" aria-label="Polski">PL</a></div><a class="button small" href="index.html#download">Download 1.1</a></div></header>
   <main class="page-main">
-    <section class="page-hero"><span class="eyebrow">Installation guide</span><h1>From ISO to your desktop.</h1><p class="lead">A short guide for installing ErgenOS 1.0 on a modern UEFI computer.</p></section>
+    <section class="page-hero"><span class="eyebrow">Installation guide</span><h1>From ISO to your desktop.</h1><p class="lead">A short guide for installing ErgenOS 1.1 on a modern UEFI computer.</p></section>
     <section class="page-content">
       <ol class="guide-steps">
-        <li><h2>1. Download the ISO</h2><p>Download ErgenOS 1.0 from the official website. The image is 2.50 GiB.</p></li>
-        <li><h2>2. Verify the image</h2><p>Compare the SHA-256 checksum before writing the image to a USB drive.</p><code>echo "236e9f6a411915e67a6800cb67cf5939cba6d30d399363c9a250186f32cba754  ergenos-1.0.0-x86_64.iso" | sha256sum -c -</code></li>
+        <li><h2>1. Download the ISO parts</h2><p>Download both numbered ISO parts and <code>SHA256SUMS-1.1.0</code> from the ErgenOS 1.1 GitHub release, then join them with <code>cat ergenos-1.1.0-x86_64.iso.part-* &gt; ergenos-1.1.0-x86_64.iso</code>. The complete image is 2.51 GiB.</p></li>
+        <li><h2>2. Verify the image</h2><p>Compare the SHA-256 checksum before writing the image to a USB drive.</p><code>echo "460c2ab349681cef4922ebba35b180b24f7a17e7182dbf23cc7c99b13b1fdcce  ergenos-1.1.0-x86_64.iso" | sha256sum -c -</code></li>
         <li><h2>3. Create the installation USB</h2><p>Use Rufus or Etcher on Windows, or GNOME Disks on Linux. Select the downloaded ISO and the correct USB drive. Writing the image erases that USB drive.</p></li>
-        <li><h2>4. Boot in UEFI mode</h2><p>Restart the computer, open its boot menu and select the USB drive's UEFI entry. The ErgenOS 1.0 ISO currently requires Secure Boot to be disabled during installation.</p></li>
+        <li><h2>4. Boot in UEFI mode</h2><p>Restart the computer, open its boot menu and select the USB drive's UEFI entry. The ErgenOS 1.1 ISO currently requires Secure Boot to be disabled during installation.</p></li>
         <li><h2>5. Install with Calamares</h2><p>Open Install ErgenOS, select your language, keyboard, disk layout and user account, then review the summary before starting installation. Back up important data before changing disk partitions.</p></li>
         <li><h2>6. Restart, update and check drivers</h2><p>Remove the USB drive, boot ErgenOS and use ErgenPac to install system updates. Open Driver Manager to detect the processor and graphics hardware and install any missing recommended packages. If you want to enable Secure Boot afterwards, follow the separate <a href="secure-boot.html">setup guide</a>.</p></li>
       </ol>
