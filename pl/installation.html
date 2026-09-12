@@ -22,7 +22,7 @@
     <section class="page-hero"><span class="eyebrow">Poradnik instalacji</span><h1>Zainstaluj ErgenOS krok po kroku.</h1><p class="lead">Od pobrania obrazu ISO aż do pierwszego uruchomienia gotowego systemu.</p></section>
     <section class="page-content">
       <ol class="guide-steps">
-        <li><h2>1. Pobierz części ISO</h2><p>Pobierz obie ponumerowane części ISO oraz <code>SHA256SUMS-1.1.0</code> z wydania ErgenOS 1.1 na GitHubie, a następnie połącz je poleceniem <code>cat ergenos-1.1.0-x86_64.iso.part-* &gt; ergenos-1.1.0-x86_64.iso</code>. Kompletny obraz ma 2,51 GiB.</p></li>
+        <li><h2>1. Pobierz ISO</h2><p>Pobierz kompletny obraz ErgenOS 1.1 z oficjalnej strony. Możesz też pobrać obie ponumerowane części z wydania na GitHubie i połączyć je poleceniem <code>cat ergenos-1.1.0-x86_64.iso.part-* &gt; ergenos-1.1.0-x86_64.iso</code>. Kompletny obraz ma 2,51 GiB.</p></li>
         <li><h2>2. Sprawdź pobrany plik</h2><p>Zanim nagrasz pendrive, sprawdź sumę SHA-256 obrazu. Dzięki temu upewnisz się, że plik został pobrany prawidłowo.</p><code>echo "460c2ab349681cef4922ebba35b180b24f7a17e7182dbf23cc7c99b13b1fdcce  ergenos-1.1.0-x86_64.iso" | sha256sum -c -</code></li>
         <li><h2>3. Nagraj pendrive</h2><p>W Windowsie użyj Rufusa lub Etchera, a w Linuksie na przykład Dysków GNOME. Wskaż pobrany obraz oraz właściwy pendrive. Uwaga: nagranie obrazu usunie z niego wszystkie dane.</p></li>
         <li><h2>4. Uruchom komputer z USB</h2><p>Uruchom komputer ponownie, wejdź do menu rozruchu i wybierz pendrive w trybie UEFI. Na czas instalacji ErgenOS 1.1 wyłącz Secure Boot.</p></li>

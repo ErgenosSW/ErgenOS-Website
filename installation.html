@@ -22,7 +22,7 @@
     <section class="page-hero"><span class="eyebrow">Installation guide</span><h1>From ISO to your desktop.</h1><p class="lead">A short guide for installing ErgenOS 1.1 on a modern UEFI computer.</p></section>
     <section class="page-content">
       <ol class="guide-steps">
-        <li><h2>1. Download the ISO parts</h2><p>Download both numbered ISO parts and <code>SHA256SUMS-1.1.0</code> from the ErgenOS 1.1 GitHub release, then join them with <code>cat ergenos-1.1.0-x86_64.iso.part-* &gt; ergenos-1.1.0-x86_64.iso</code>. The complete image is 2.51 GiB.</p></li>
+        <li><h2>1. Download the ISO</h2><p>Download the complete ErgenOS 1.1 image from the official website. Alternatively, download both numbered parts from the GitHub release and join them with <code>cat ergenos-1.1.0-x86_64.iso.part-* &gt; ergenos-1.1.0-x86_64.iso</code>. The complete image is 2.51 GiB.</p></li>
         <li><h2>2. Verify the image</h2><p>Compare the SHA-256 checksum before writing the image to a USB drive.</p><code>echo "460c2ab349681cef4922ebba35b180b24f7a17e7182dbf23cc7c99b13b1fdcce  ergenos-1.1.0-x86_64.iso" | sha256sum -c -</code></li>
         <li><h2>3. Create the installation USB</h2><p>Use Rufus or Etcher on Windows, or GNOME Disks on Linux. Select the downloaded ISO and the correct USB drive. Writing the image erases that USB drive.</p></li>
         <li><h2>4. Boot in UEFI mode</h2><p>Restart the computer, open its boot menu and select the USB drive's UEFI entry. The ErgenOS 1.1 ISO currently requires Secure Boot to be disabled during installation.</p></li>
