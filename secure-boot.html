@@ -36,6 +36,7 @@
       <div class="hardware-notes">
         <p><strong>Prefer the terminal?</strong> The complete CLI remains available. Use <code>sudo ergenos-secureboot enable --dry-run</code>, then <code>sudo ergenos-secureboot enable</code>. After enrollment and firmware activation, verify with <code>sudo ergenos-secureboot check</code> and <code>mokutil --sb-state</code>.</p>
         <p><strong>After updates:</strong> packaged hooks handle kernel and GRUB updates automatically. ErgenPac Driver Manager also refreshes ErgenOS Secure Boot after installing DKMS drivers. For a DKMS driver installed by another method, such as an NVIDIA or Broadcom Wi-Fi module, run <code>sudo ergenos-secureboot refresh</code> and verify the result with <code>sudo ergenos-secureboot check</code>.</p>
+        <p><strong>Btrfs recovery remains available:</strong> the signed loader reads the current GRUB configuration from the installed boot filesystem, so newly created Snapper recovery points remain available under <strong>ErgenOS Snapshots</strong>. This path has been tested on a physical ThinkPad by deliberately breaking the normal system, booting a snapshot with Secure Boot enabled and completing the rollback in ErgenCTL.</p>
         <p><strong>Need to remove it?</strong> Open <strong>Maintenance and removal</strong> on the Secure Boot page and follow the displayed steps. The same process is available with <code>remove-mok</code> and <code>disable</code> in the terminal. The package blocks unsafe removal while support is still active.</p>
       </div>
     </section>
