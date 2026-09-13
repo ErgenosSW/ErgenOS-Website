@@ -6,7 +6,7 @@
   <title>Znane ograniczenia — ErgenOS 1.1</title>
   <meta name="description" content="Znane ograniczenia i informacje o obsłudze sprzętu w ErgenOS 1.1.">
   <meta name="robots" content="index,follow,max-image-preview:large">
-  <meta name="theme-color" content="#030a14">
+  <meta name="theme-color" content="#080c10">
   <link rel="canonical" href="https://ergenossw.github.io/ErgenOS-Website/pl/known-limitations.html">
   <link rel="alternate" hreflang="en" href="https://ergenossw.github.io/ErgenOS-Website/known-limitations.html">
   <link rel="alternate" hreflang="pl" href="https://ergenossw.github.io/ErgenOS-Website/pl/known-limitations.html">
@@ -17,9 +17,10 @@
   <link rel="stylesheet" href="../overrides.css">
 </head>
 <body>
+  <a class="skip-link" href="#main-content">Przejdź do treści</a>
   <header class="nav-shell"><a class="brand" href="index.html"><img src="../assets/ergenos-logo.png" alt=""><span>ErgenOS</span></a><div class="header-actions"><div class="language-switcher" aria-label="Język"><a href="../known-limitations.html" lang="en" hreflang="en" aria-label="English">EN</a><span aria-current="page">PL</span></div><a class="button small" href="index.html#download">Pobierz 1.1</a></div></header>
-  <main class="page-main">
-    <section class="page-hero"><span class="eyebrow">ErgenOS 1.1</span><h1>Znane ograniczenia.</h1><p class="lead">ErgenOS nadaje się do codziennej pracy, ale obecne wydanie nie obsługuje jeszcze wszystkiego.</p></section>
+  <main class="page-main" id="main-content">
+    <section class="page-hero"><a class="back-link" href="index.html">← Wróć do ErgenOS</a><span class="eyebrow">ErgenOS 1.1</span><h1>Znane ograniczenia.</h1><p class="lead">ErgenOS nadaje się do codziennej pracy, ale obecne wydanie nie obsługuje jeszcze wszystkiego.</p></section>
     <section class="page-content limitation-list">
       <article class="limitation-card"><h2>Secure Boot</h2><p>Po instalacji ErgenCTL przeprowadza przez eksperymentalną konfigurację z shim podpisanym przez Microsoft i własnym kluczem MOK. Samo ISO ErgenOS 1.1 nadal wymaga wyłączenia Secure Boot. Procedurę sprawdziliśmy na QEMU/OVMF i Lenovo ThinkPadzie; zobacz <a href="secure-boot.html">poradnik konfiguracji</a>.</p></article>
       <article class="limitation-card"><h2>Przetestowany sprzęt</h2><p>ErgenOS został dotąd sprawdzony na ograniczonej liczbie komputerów. Jeśli trafisz na problem sprzętowy, zgłoś go wraz z dokładnym modelem urządzenia i informacjami o systemie.</p></article>
@@ -27,5 +28,6 @@
     </section>
   </main>
   <footer><a class="brand" href="index.html"><img src="../assets/ergenos-logo.png" alt=""><span>ErgenOS</span></a><p>Niezależny. Otwarty. Dopracowany.</p><div><a href="index.html">Strona główna</a><a href="installation.html">Instalacja</a><a href="https://github.com/ErgenosSW/ErgenOS-Linux/issues">Zgłoś problem</a></div></footer>
+<script src="../script.js"></script>
 </body>
 </html>

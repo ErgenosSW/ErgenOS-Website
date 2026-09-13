@@ -3,15 +3,15 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>ErgenOS — Your system. Under control.</title>
+  <title>ErgenOS — Your system. Your rules.</title>
   <meta name="description" content="ErgenOS is an approachable Arch Linux-based desktop distribution with graphical software management, driver tools and built-in Btrfs recovery.">
   <meta name="robots" content="index,follow,max-image-preview:large">
-  <meta name="theme-color" content="#030a14">
+  <meta name="theme-color" content="#080c10">
   <link rel="canonical" href="https://ergenossw.github.io/ErgenOS-Website/">
   <link rel="alternate" hreflang="en" href="https://ergenossw.github.io/ErgenOS-Website/">
   <link rel="alternate" hreflang="pl" href="https://ergenossw.github.io/ErgenOS-Website/pl/">
   <link rel="alternate" hreflang="x-default" href="https://ergenossw.github.io/ErgenOS-Website/">
-  <meta property="og:title" content="ErgenOS — Your system. Under control.">
+  <meta property="og:title" content="ErgenOS — Your system. Your rules.">
   <meta property="og:description" content="Arch power with graphical tools and built-in recovery.">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="ErgenOS">
@@ -20,7 +20,7 @@
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="ErgenOS — Your system. Under control.">
+  <meta name="twitter:title" content="ErgenOS — Your system. Your rules.">
   <meta name="twitter:description" content="Arch power with graphical tools and built-in recovery.">
   <meta name="twitter:image" content="https://ergenossw.github.io/ErgenOS-Website/assets/social-card.png">
   <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
@@ -52,6 +52,7 @@
   </script>
 </head>
 <body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
   <header class="nav-shell">
     <a class="brand" href="#top"><img src="assets/ergenos-logo.png" alt=""><span>ErgenOS</span></a>
     <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="main-nav" aria-label="Open navigation"><span></span><span></span><span></span></button>
@@ -59,60 +60,55 @@
     <div class="header-actions"><div class="language-switcher" aria-label="Language"><span aria-current="page">EN</span><a href="pl/" lang="pl" hreflang="pl" aria-label="Polski">PL</a></div><a class="button small" href="#download">Download 1.1</a></div>
   </header>
 
-  <main>
+  <main id="main-content">
     <section class="hero" id="top">
-      <div class="hero-copy">
+      <div class="hero-copy"><div class="hero-kicker">ARCH LINUX BASED <span></span> INDEPENDENT BY DESIGN</div>
         <a class="release-pill" href="https://github.com/ErgenosSW/ErgenOS-Linux/releases/tag/v1.1.0"><span>New</span> ErgenOS 1.1 is available</a>
-        <h1>Your system.<br><em>Under control.</em></h1>
+        <h1>Your system.<br><em>Your rules.</em></h1>
         <p class="lead">An approachable Arch Linux based desktop with built-in recovery, graphical software management and a polished GNOME experience.</p>
         <div class="hero-actions"><a class="button" href="#download">Download ErgenOS</a><a class="text-link" href="#features">Explore the system <span>→</span></a></div>
         <p class="fine-print">Free and open source · GNOME · x86_64</p>
       </div>
-      <a class="desktop-shot" href="assets/screenshots/ergenos-desktop.png" aria-label="Open a full-size screenshot of the ErgenOS desktop">
-        <img src="assets/screenshots/ergenos-desktop.webp" alt="ErgenOS 1.1 desktop running on physical hardware">
+      <div class="desktop-stage"><div class="stage-label"><span><i></i> ERGENOS 1.1 / GNOME DESKTOP</span><span>THIS IS WHAT FREEDOM LOOKS LIKE</span></div><a class="desktop-shot" href="assets/screenshots/ergenos-desktop.png" aria-label="Open a full-size screenshot of the ErgenOS desktop">
+        <img src="assets/screenshots/ergenos-desktop.webp" width="1920" height="1080" fetchpriority="high" alt="ErgenOS 1.1 desktop running on physical hardware">
         <span class="shot-hint">View full size</span>
-      </a>
-    </section>
+      </a><div class="stage-footer"><span>Real desktop. Real hardware.</span><span>01 — 04 <span class="stage-line"></span> GNOME / WAYLAND</span></div></div>
+    </section><div class="platform-strip"><span>A solid foundation. A distinct identity.</span><b>Arch Linux</b><b>GNOME</b><b>linux-zen</b><b>Btrfs + Snapper</b><b>Calamares</b></div>
 
     <section class="section" id="features">
       <div class="section-heading"><span class="eyebrow">Why ErgenOS</span><h2>Arch power without the rough edges.</h2><p>ErgenOS keeps the flexibility of a rolling system while making installation, updates and recovery easier to understand.</p></div>
       <div class="feature-grid">
-        <article><span class="feature-number">01</span><h3>Recover with confidence</h3><p>Automatic Btrfs snapshots surround package transactions. If an update goes wrong, boot an earlier system state from GRUB.</p></article>
-        <article><span class="feature-number">02</span><h3>Manage software and drivers visually</h3><p>ErgenPac brings Arch repositories, optional Chaotic-AUR sources and Flathub together, while Driver Manager detects missing graphics and processor packages.</p></article>
-        <article><span class="feature-number">03</span><h3>Ready from first login</h3><p>A guided welcome, sensible defaults and a graphical installer get you from the live USB to your own desktop quickly.</p></article>
+        <article><div class="feature-top"><span class="feature-number">01</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 11a8 8 0 1 1 2 7M4 4v7h7"/><path d="M12 7v5l3 2"/></svg></div><h3>Recover with confidence</h3><p>Automatic Btrfs snapshots surround package transactions. If an update goes wrong, boot an earlier system state from GRUB.</p></article>
+        <article><div class="feature-top"><span class="feature-number">02</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="14" rx="2"/><path d="M8 22h8m-4-4v4M7 9h4m-4 4h8"/></svg></div><h3>Manage software and drivers visually</h3><p>ErgenPac brings Arch repositories, optional Chaotic-AUR sources and Flathub together, while Driver Manager detects missing graphics and processor packages.</p></article>
+        <article><div class="feature-top"><span class="feature-number">03</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 3 2.8 6.2L21 12l-6.2 2.8L12 21l-2.8-6.2L3 12l6.2-2.8Z"/></svg></div><h3>Ready from first login</h3><p>A guided welcome, sensible defaults and a graphical installer get you from the live USB to your own desktop quickly.</p></article>
       </div>
     </section>
 
     <section class="recovery-band">
       <div><span class="eyebrow light">Built around recovery</span><h2>Experiment freely.<br>There is a way back.</h2></div>
-      <div class="timeline"><span>Before update</span><i></i><span>Pacman transaction</span><i></i><span>After update</span></div>
+      <div class="timeline" aria-label="Automatic snapshot sequence"><span><b>01</b>Before update</span><i></i><span><b>02</b>Pacman transaction</span><i></i><span><b>03</b>After update</span></div>
       <p>Snapper, snap-pac and grub-btrfs work together to make system snapshots a normal part of using ErgenOS, not an emergency afterthought.</p>
     </section>
 
     <section class="section apps-section" id="apps">
-      <div class="section-heading"><span class="eyebrow">Made for ErgenOS</span><h2>Three tools. One coherent system.</h2></div>
-      <div class="app-grid">
-        <a class="app-card" href="https://github.com/ErgenosSW/ErgenOS-Welcome"><img src="assets/welcome-logo.png" alt="ErgenOS Welcome icon"><div><h3>ErgenOS Welcome</h3><p>Your starting point after installation, with system information and shortcuts to essential tools.</p><span class="card-link">View on GitHub →</span></div></a>
-        <a class="app-card featured" href="https://github.com/ErgenosSW/ErgenPac"><img src="assets/ergenpac-logo.png" alt="ErgenPac icon"><div><h3>ErgenPac</h3><p>Search, install and update software from Arch Linux and Flathub, then detect and install the recommended hardware driver packages.</p><span class="card-link">View on GitHub →</span></div></a>
-        <a class="app-card" href="https://github.com/ErgenosSW/ErgenCTL"><img src="assets/ergenctl-logo.png" alt="ErgenCTL icon"><div><h3>ErgenCTL</h3><p>Diagnose the installation, inspect boot logs, recover snapshots and configure Secure Boot through a guided checklist.</p><span class="card-link">View on GitHub →</span></div></a>
-      </div>
-    </section>
-
-    <section class="section gallery-section" id="screenshots">
-      <div class="section-heading"><span class="eyebrow">See it in action</span><h2>A real desktop. Real ErgenOS tools.</h2><p>ErgenOS 1.1 running on physical hardware, with the system tools included in every installation.</p></div>
-      <div class="screenshot-grid">
-        <a class="screenshot-card screenshot-wide" href="assets/screenshots/ergenpac-search.png">
-          <img src="assets/screenshots/ergenpac-search.webp" alt="ErgenPac displaying a package from the ErgenOS repository" loading="lazy">
-          <span><strong>Find and manage software</strong><small>ErgenPac</small></span>
-        </a>
-        <a class="screenshot-card" href="assets/screenshots/ergenctl-system-check.png">
-          <img src="assets/screenshots/ergenctl-system-check.webp" alt="ErgenCTL displaying successful system checks" loading="lazy">
-          <span><strong>Know your system is healthy</strong><small>ErgenCTL</small></span>
-        </a>
-        <a class="screenshot-card" href="assets/screenshots/ergenos-welcome.png">
-          <img src="assets/screenshots/ergenos-welcome.webp" alt="ErgenOS Welcome with shortcuts to ErgenPac and ErgenCTL" loading="lazy">
-          <span><strong>Start in the right place</strong><small>ErgenOS Welcome</small></span>
-        </a>
+      <div class="section-heading"><span class="eyebrow">Made for ErgenOS</span><h2>Three tools.<br>One coherent system.</h2><p>From your first login to your next update. Meet the tools that make the system yours.</p></div>
+      <div class="app-showcase" id="screenshots">
+        <div class="app-tabs" aria-label="ErgenOS applications" hidden><button class="app-tab" type="button" id="app-tab-0" data-app-tab="0"><img src="assets/welcome-logo-mark.png" alt="" width="32" height="32"><span>ErgenOS Welcome<small>Your first steps</small></span><span class="tab-index" aria-hidden="true">01</span></button>
+          <button class="app-tab" type="button" id="app-tab-1" data-app-tab="1"><img src="assets/ergenpac-logo-mark.png" alt="" width="32" height="32"><span>ErgenPac<small>Software and drivers</small></span><span class="tab-index" aria-hidden="true">02</span></button>
+          <button class="app-tab" type="button" id="app-tab-2" data-app-tab="2"><img src="assets/ergenctl-logo-mark.png" alt="" width="32" height="32"><span>ErgenCTL<small>System health</small></span><span class="tab-index" aria-hidden="true">03</span></button></div>
+        <article class="app-panel" id="app-panel-0" data-app-panel="0">
+          <div class="app-panel-copy"><span class="eyebrow">ErgenOS Welcome</span><h3>A better start.<br>From your first login.</h3><p>Your starting point after installation, with system information and shortcuts to essential tools.</p><ul class="app-capabilities"><li>System information</li><li>Essential shortcuts</li><li>Post-install guidance</li></ul><a class="text-link app-source" href="https://github.com/ErgenosSW/ErgenOS-Welcome">Explore ErgenOS Welcome on GitHub <span>↗</span></a></div>
+          <a class="screenshot-card app-preview" href="assets/screenshots/ergenos-welcome.png"><img src="assets/screenshots/ergenos-welcome.webp" alt="ErgenOS Welcome — Your first steps" width="1920" height="1080" loading="lazy" decoding="async"><span><strong>ErgenOS Welcome</strong><small>View full size</small></span></a>
+        </article>
+        <article class="app-panel" id="app-panel-1" data-app-panel="1">
+          <div class="app-panel-copy"><span class="eyebrow">ErgenPac</span><h3>Everything you need.<br>One place to find it.</h3><p>Search, install and update software from Arch Linux and Flathub, then detect and install the recommended hardware driver packages.</p><ul class="app-capabilities"><li>Arch Linux and Flathub</li><li>Application updates</li><li>Driver detection</li></ul><a class="text-link app-source" href="https://github.com/ErgenosSW/ErgenPac">Explore ErgenPac on GitHub <span>↗</span></a></div>
+          <a class="screenshot-card app-preview" href="assets/screenshots/ergenpac-search.png"><img src="assets/screenshots/ergenpac-search.webp" alt="ErgenPac — Software and drivers" width="1920" height="1080" loading="lazy" decoding="async"><span><strong>ErgenPac</strong><small>View full size</small></span></a>
+        </article>
+        <article class="app-panel" id="app-panel-2" data-app-panel="2">
+          <div class="app-panel-copy"><span class="eyebrow">ErgenCTL</span><h3>Know your system.<br>Stay in control.</h3><p>Diagnose the installation, inspect boot logs, recover snapshots and configure Secure Boot through a guided checklist.</p><ul class="app-capabilities"><li>Diagnostics and boot logs</li><li>Snapshot recovery</li><li>Secure Boot setup</li></ul><a class="text-link app-source" href="https://github.com/ErgenosSW/ErgenCTL">Explore ErgenCTL on GitHub <span>↗</span></a></div>
+          <a class="screenshot-card app-preview" href="assets/screenshots/ergenctl-system-check.png"><img src="assets/screenshots/ergenctl-system-check.webp" alt="ErgenCTL — System health" width="1920" height="1080" loading="lazy" decoding="async"><span><strong>ErgenCTL</strong><small>View full size</small></span></a>
+        </article>
+        <p class="showcase-note">Real screenshots of ErgenOS 1.1. Included in every installation.</p>
       </div>
     </section>
 
@@ -141,8 +137,8 @@
     </section>
 
     <section class="download" id="download">
-      <div><span class="eyebrow light">ErgenOS 1.1</span><h2>Take control of your desktop.</h2></div>
-      <div class="download-actions"><a class="button white" href="https://www.mediafire.com/file/psvdrlrwlsz2c2c/ergenos-1.1.0-x86_64.iso/file">Download ISO</a><a href="https://github.com/ErgenosSW/ErgenOS-Linux/releases/tag/v1.1.0">GitHub release →</a><div class="release-meta"><span>2.51 GiB</span><span>Released September 13, 2026</span><span>Hosted on MediaFire</span></div><div class="checksum"><span>SHA-256</span><code id="iso-checksum">460c2ab349681cef4922ebba35b180b24f7a17e7182dbf23cc7c99b13b1fdcce</code><button type="button" data-copy-checksum>Copy</button></div></div>
+      <div><span class="eyebrow light">ErgenOS 1.1</span><h2>Make yourself<br>at home.</h2><p class="download-description">Start with ErgenOS 1.1. An open system, thoughtful tools and the freedom to choose.</p><div class="download-platform"><span>x86_64</span><span>GNOME</span><span>Rolling release</span></div></div>
+      <div class="download-actions"><p class="download-note">Disable Secure Boot for installation. Snapshots require Btrfs.</p><a class="button white" href="https://www.mediafire.com/file/psvdrlrwlsz2c2c/ergenos-1.1.0-x86_64.iso/file">Download ISO</a><a href="https://github.com/ErgenosSW/ErgenOS-Linux/releases/tag/v1.1.0">GitHub release →</a><div class="release-meta"><span>2.51 GiB</span><span>Released September 13, 2026</span><span>Hosted on MediaFire</span></div><div class="checksum"><span>SHA-256</span><code id="iso-checksum">460c2ab349681cef4922ebba35b180b24f7a17e7182dbf23cc7c99b13b1fdcce</code><button type="button" data-copy-checksum>Copy</button></div></div>
     </section>
 
     <section class="section faq" id="faq">

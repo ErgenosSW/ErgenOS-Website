@@ -6,7 +6,7 @@
   <title>Known limitations — ErgenOS 1.1</title>
   <meta name="description" content="Known limitations and hardware support notes for ErgenOS 1.1.">
   <meta name="robots" content="index,follow,max-image-preview:large">
-  <meta name="theme-color" content="#030a14">
+  <meta name="theme-color" content="#080c10">
   <link rel="canonical" href="https://ergenossw.github.io/ErgenOS-Website/known-limitations.html">
   <link rel="alternate" hreflang="en" href="https://ergenossw.github.io/ErgenOS-Website/known-limitations.html">
   <link rel="alternate" hreflang="pl" href="https://ergenossw.github.io/ErgenOS-Website/pl/known-limitations.html">
@@ -17,9 +17,10 @@
   <link rel="stylesheet" href="overrides.css">
 </head>
 <body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
   <header class="nav-shell"><a class="brand" href="index.html"><img src="assets/ergenos-logo.png" alt=""><span>ErgenOS</span></a><div class="header-actions"><div class="language-switcher" aria-label="Language"><span aria-current="page">EN</span><a href="pl/known-limitations.html" lang="pl" hreflang="pl" aria-label="Polski">PL</a></div><a class="button small" href="index.html#download">Download 1.1</a></div></header>
-  <main class="page-main">
-    <section class="page-hero"><span class="eyebrow">ErgenOS 1.1</span><h1>Known limitations.</h1><p class="lead">ErgenOS is ready for daily use, but the current release still has a few clearly defined boundaries.</p></section>
+  <main class="page-main" id="main-content">
+    <section class="page-hero"><a class="back-link" href="index.html">← Back to ErgenOS</a><span class="eyebrow">ErgenOS 1.1</span><h1>Known limitations.</h1><p class="lead">ErgenOS is ready for daily use, but the current release still has a few clearly defined boundaries.</p></section>
     <section class="page-content limitation-list">
       <article class="limitation-card"><h2>Secure Boot</h2><p>ErgenCTL provides guided experimental setup after installation using Microsoft-signed shim and a Machine Owner Key. The ErgenOS 1.1 ISO itself still requires Secure Boot to be disabled. The workflow has been validated with QEMU/OVMF and one Lenovo ThinkPad; see the <a href="secure-boot.html">setup guide</a>.</p></article>
       <article class="limitation-card"><h2>Hardware coverage</h2><p>The range of validated computer configurations is still limited. Please report hardware-specific problems with the exact device model and relevant system information.</p></article>
@@ -27,5 +28,6 @@
     </section>
   </main>
   <footer><a class="brand" href="index.html"><img src="assets/ergenos-logo.png" alt=""><span>ErgenOS</span></a><p>Independent. Open source. Built with care.</p><div><a href="index.html">Home</a><a href="installation.html">Installation</a><a href="https://github.com/ErgenosSW/ErgenOS-Linux/issues">Report an issue</a></div></footer>
+<script src="script.js"></script>
 </body>
 </html>
