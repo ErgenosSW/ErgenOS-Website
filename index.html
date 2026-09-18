@@ -56,7 +56,7 @@
   <header class="nav-shell">
     <a class="brand" href="#top"><img src="assets/ergenos-logo.png" alt=""><span>ErgenOS</span></a>
     <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="main-nav" aria-label="Open navigation"><span></span><span></span><span></span></button>
-    <nav id="main-nav" aria-label="Main navigation"><a href="#features">Why ErgenOS</a><a href="#apps">Applications</a><a href="#requirements">Requirements</a><a href="#install">Install</a><a href="#faq">FAQ</a></nav>
+    <nav id="main-nav" aria-label="Main navigation"><a href="#features">Why ErgenOS</a><a href="#apps">Applications</a><a href="#requirements">Requirements</a><a href="https://ergenossw.github.io/ErgenOS-Wiki/">Wiki</a><a href="#faq">FAQ</a></nav>
     <div class="header-actions"><div class="language-switcher" aria-label="Language"><span aria-current="page">EN</span><a href="pl/" lang="pl" hreflang="pl" aria-label="Polski">PL</a></div><a class="button small" href="#download">Download 1.1</a></div>
   </header>
 
@@ -121,19 +121,14 @@
         <article><span>Firmware</span><h3>UEFI</h3><p>ErgenOS 1.1 is designed for installation in UEFI mode.</p></article>
       </div>
       <div class="hardware-notes">
-        <p><strong>Secure Boot:</strong> ErgenCTL now provides guided post-install setup using Microsoft-signed shim and a Machine Owner Key. See the <a href="secure-boot.html">Secure Boot setup guide</a>.</p>
+        <p><strong>Secure Boot:</strong> ErgenCTL now provides guided post-install setup using Microsoft-signed shim and a Machine Owner Key. See the <a href="https://ergenossw.github.io/ErgenOS-Wiki/security/secure-boot.html">Secure Boot setup guide</a>.</p>
         <p><strong>NVIDIA:</strong> after installation, ErgenPac Driver Manager detects supported modern NVIDIA hardware and installs the recommended official driver stack. Legacy or unrecognized generations are flagged for manual selection to avoid installing an incompatible driver.</p>
       </div>
     </section>
 
     <section class="section install-section" id="install">
-      <div class="section-heading"><span class="eyebrow">Simple installation</span><h2>From download to desktop.</h2></div>
-      <ol class="steps">
-        <li><span>1</span><div><h3>Download</h3><p>Get the verified ErgenOS 1.1 image.</p></div></li>
-        <li><span>2</span><div><h3>Create a USB</h3><p>Write the image with Rufus, Etcher or your preferred tool.</p></div></li>
-        <li><span>3</span><div><h3>Boot and install</h3><p>Start from USB and follow the graphical Calamares installer.</p></div></li>
-      </ol>
-      <a class="text-link guide-link" href="installation.html">Read the complete installation guide <span>→</span></a>
+      <div class="section-heading"><span class="eyebrow">Documentation</span><h2>Get to know your system.</h2><p>Installation, administration and recovery — all guides live in the ErgenOS Wiki.</p></div>
+      <a class="button" href="https://ergenossw.github.io/ErgenOS-Wiki/">Open ErgenOS Wiki <span aria-hidden="true">→</span></a>
     </section>
 
     <section class="download" id="download">
@@ -148,12 +143,12 @@
         <details><summary>Is ErgenOS a gaming distribution?</summary><p>Not yet. Gaming-oriented features are part of the long-term direction, but ErgenOS 1.1 is a general-purpose desktop system.</p></details>
         <details><summary>How are updates delivered?</summary><p>Arch packages come from the standard Arch repositories. ErgenOS applications are distributed through the signed ErgenOS repository and handled by Pacman or ErgenPac.</p></details>
         <details><summary>Can I use the AUR?</summary><p>Yes. During installation you can stay with official repositories or configure yay, paru or Chaotic-AUR.</p></details>
-        <details><summary>Does ErgenOS support Secure Boot?</summary><p>Experimental post-install support is available through ErgenCTL and the signed ErgenOS repository. The current ISO must be installed with Secure Boot disabled; follow the <a href="secure-boot.html">Secure Boot setup guide</a> after installation.</p></details>
+        <details><summary>Does ErgenOS support Secure Boot?</summary><p>Experimental post-install support is available through ErgenCTL and the signed ErgenOS repository. The current ISO must be installed with Secure Boot disabled; follow the <a href="https://ergenossw.github.io/ErgenOS-Wiki/security/secure-boot.html">Secure Boot setup guide</a> after installation.</p></details>
       </div>
     </section>
   </main>
 
-  <footer><a class="brand" href="#top"><img src="assets/ergenos-logo.png" alt=""><span>ErgenOS</span></a><p>Independent. Open source. Built with care.</p><div><a href="installation.html">Installation</a><a href="known-limitations.html">Known limitations</a><a href="https://github.com/ErgenosSW">GitHub</a><a href="https://github.com/ErgenosSW/ErgenOS-Linux/issues">Report an issue</a><a href="https://github.com/ErgenosSW/ErgenOS-Linux/blob/main/LICENSE">License</a></div></footer>
+  <footer><a class="brand" href="#top"><img src="assets/ergenos-logo.png" alt=""><span>ErgenOS</span></a><p>Independent. Open source. Built with care.</p><div><a href="https://ergenossw.github.io/ErgenOS-Wiki/getting-started/installation.html">Installation</a><a href="https://ergenossw.github.io/ErgenOS-Wiki/getting-started/known-limitations.html">Known limitations</a><a href="https://github.com/ErgenosSW">GitHub</a><a href="https://github.com/ErgenosSW/ErgenOS-Linux/issues">Report an issue</a><a href="https://github.com/ErgenosSW/ErgenOS-Linux/blob/main/LICENSE">License</a></div></footer>
   <script src="script.js?v=0e3d0809cc0f"></script>
 </body>
 </html>

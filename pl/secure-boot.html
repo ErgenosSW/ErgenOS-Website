@@ -3,46 +3,10 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Konfiguracja Secure Boot — ErgenOS</title>
-  <meta name="description" content="Skonfiguruj eksperymentalne wsparcie Secure Boot w zainstalowanym ErgenOS przy użyciu shim i Machine Owner Key.">
-  <meta name="robots" content="index,follow,max-image-preview:large">
-  <meta name="theme-color" content="#080c10">
-  <link rel="canonical" href="https://ergenossw.github.io/ErgenOS-Website/pl/secure-boot.html">
-  <link rel="alternate" hreflang="en" href="https://ergenossw.github.io/ErgenOS-Website/secure-boot.html">
-  <link rel="alternate" hreflang="pl" href="https://ergenossw.github.io/ErgenOS-Website/pl/secure-boot.html">
-  <link rel="alternate" hreflang="x-default" href="https://ergenossw.github.io/ErgenOS-Website/secure-boot.html">
-  <link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon-32.png">
-  <link rel="apple-touch-icon" sizes="180x180" href="../assets/apple-touch-icon.png">
-  <link rel="stylesheet" href="../style.css?v=d61560196b8d">
-  <link rel="stylesheet" href="../overrides.css?v=efb8a88af6a3">
+  <title>Dokumentacja w ErgenOS Wiki</title>
+  <meta name="robots" content="noindex,follow">
+  <link rel="canonical" href="https://ergenossw.github.io/ErgenOS-Wiki/pl/security/secure-boot.html">
+  <meta http-equiv="refresh" content="0; url=https://ergenossw.github.io/ErgenOS-Wiki/pl/security/secure-boot.html">
 </head>
-<body>
-  <a class="skip-link" href="#main-content">Przejdź do treści</a>
-  <header class="nav-shell"><a class="brand" href="index.html"><img src="../assets/ergenos-logo.png" alt=""><span>ErgenOS</span></a><div class="header-actions"><div class="language-switcher" aria-label="Język"><a href="../secure-boot.html" lang="en" hreflang="en" aria-label="English">EN</a><span aria-current="page">PL</span></div><a class="button small" href="index.html#download">Pobierz 1.1</a></div></header>
-  <main class="page-main" id="main-content">
-    <section class="page-hero"><a class="back-link" href="index.html">← Wróć do ErgenOS</a><span class="eyebrow">Funkcja eksperymentalna</span><h1>Secure Boot w ErgenOS.</h1><p class="lead">Skonfiguruj Secure Boot za pomocą shim podpisanego przez Microsoft i własnego klucza MOK — bez wymiany kluczy zapisanych w UEFI.</p></section>
-    <section class="page-content">
-      <div class="hardware-notes">
-        <p><strong>Zanim zaczniesz:</strong> instalacyjne ISO ErgenOS 1.1 nie uruchamia się jeszcze przy włączonym Secure Boot. Najpierw zainstaluj system z wyłączoną funkcją, a dopiero później wykonaj poniższe kroki.</p>
-        <p><strong>Na czym to sprawdziliśmy:</strong> procedura działa na QEMU/OVMF oraz fizycznym Lenovo ThinkPadzie. Ustawienia UEFI różnią się w zależności od producenta, dlatego przed rozpoczęciem zabezpiecz ważne dane.</p>
-      </div>
-      <ol class="guide-steps">
-        <li><h2>1. Zaktualizuj system i zainstaluj narzędzia</h2><p>Z podpisanego repozytorium ErgenOS pobierz najnowszy ErgenCTL razem z modułem obsługującym Secure Boot.</p><code>sudo pacman -Syu ergenctl ergenos-secureboot</code></li>
-        <li><h2>2. Uruchom test gotowości</h2><p>Otwórz <strong>ErgenCTL</strong>, przejdź do zakładki <strong>Secure Boot</strong> i kliknij <strong>Check readiness</strong>. Program bez wprowadzania zmian sprawdzi tryb UEFI, partycję EFI i potrzebne składniki rozruchowe.</p></li>
-        <li><h2>3. Przygotuj Secure Boot</h2><p>Kliknij <strong>Set up Secure Boot</strong>, dwukrotnie wpisz jednorazowe hasło MOK i zatwierdź systemowe okno uwierzytelniania. ErgenCTL utworzy klucz, podpisze GRUB, jądra i moduły DKMS, a następnie doda osobną pozycję ErgenOS Secure Boot.</p><p>Hasło MOK będzie potrzebne tylko raz, przy następnym uruchomieniu. Nie jest to hasło do konta i nie ma dostępu do prywatnego klucza podpisującego.</p></li>
-        <li><h2>4. Dodaj klucz MOK</h2><p>Uruchom komputer ponownie przez pozycję <strong>ErgenOS Secure Boot</strong>. W MokManager wybierz <strong>Enroll MOK</strong>, potwierdź klucz i wpisz tymczasowe hasło z poprzedniego kroku. Następnie uruchom komputer ponownie.</p></li>
-        <li><h2>5. Włącz Secure Boot w firmware</h2><p>Otwórz ustawienia UEFI komputera i włącz Secure Boot w trybie standardowym lub z domyślnymi kluczami. Nie usuwaj ani nie zastępuj kluczy platformy. Zapisz ustawienia i uruchom pozycję <strong>ErgenOS Secure Boot</strong>.</p></li>
-        <li><h2>6. Sprawdź, czy wszystko działa</h2><p>Wróć do zakładki <strong>Secure Boot</strong> w ErgenCTL i kliknij <strong>Check status</strong>. Program osobno sprawdzi dziewięć elementów konfiguracji. Jeśli wszystkie są gotowe, zobaczysz informację, że Secure Boot jest aktywny.</p></li>
-      </ol>
-      <div class="hardware-notes">
-        <p><strong>Wolisz terminal?</strong> Nadal możesz przejść cały proces ręcznie. Zacznij od <code>sudo ergenos-secureboot enable --dry-run</code>, a następnie wykonaj <code>sudo ergenos-secureboot enable</code>. Po dodaniu klucza MOK i włączeniu funkcji w UEFI sprawdź wynik przez <code>sudo ergenos-secureboot check</code> oraz <code>mokutil --sb-state</code>.</p>
-        <p><strong>Po aktualizacjach:</strong> dołączone hooki automatycznie obsługują aktualizacje jądra i GRUB-a. Driver Manager w ErgenPac odświeża też ErgenOS Secure Boot po instalacji sterowników DKMS. Jeśli zainstalujesz moduł DKMS inną metodą, na przykład sterownik NVIDIA albo moduł Wi-Fi Broadcom, wykonaj <code>sudo ergenos-secureboot refresh</code> i sprawdź wynik poleceniem <code>sudo ergenos-secureboot check</code>.</p>
-        <p><strong>Snapshoty pozostają dostępne:</strong> podpisany program rozruchowy korzysta z bieżącej konfiguracji zapisanej na partycji rozruchowej, dlatego nowe punkty przywracania Snappera pojawiają się w menu <strong>ErgenOS Snapshots</strong>. Sprawdziliśmy cały scenariusz na ThinkPadzie: celowo uszkodziliśmy normalny system, uruchomiliśmy snapshot przy aktywnym Secure Boot i przywróciliśmy sprawny stan za pomocą ErgenCTL.</p>
-        <p><strong>Chcesz wyłączyć obsługę?</strong> Rozwiń sekcję <strong>Maintenance and removal</strong> w ErgenCTL i wykonaj pokazane tam kroki. Ten sam proces jest dostępny w terminalu przez polecenia <code>remove-mok</code> i <code>disable</code>. Pakiet nie pozwoli usunąć się w sposób, który mógłby unieruchomić system.</p>
-      </div>
-    </section>
-  </main>
-  <footer><a class="brand" href="index.html"><img src="../assets/ergenos-logo.png" alt=""><span>ErgenOS</span></a><p>Niezależny. Otwarty. Dopracowany.</p><div><a href="index.html">Strona główna</a><a href="installation.html">Instalacja</a><a href="known-limitations.html">Znane ograniczenia</a><a href="https://github.com/ErgenosSW/ErgenOS-SecureBoot">Kod źródłowy</a></div></footer>
-<script src="../script.js?v=0e3d0809cc0f"></script>
-</body>
+<body><main><h1>Dokumentacja w ErgenOS Wiki</h1><p><a href="https://ergenossw.github.io/ErgenOS-Wiki/pl/security/secure-boot.html">Otwórz poradnik w ErgenOS Wiki</a></p></main></body>
 </html>

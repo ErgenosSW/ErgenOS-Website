@@ -58,7 +58,7 @@
   <header class="nav-shell">
     <a class="brand" href="#top"><img src="../assets/ergenos-logo.png" alt=""><span>ErgenOS</span></a>
     <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="main-nav" aria-label="Otwórz nawigację" data-menu-open="Otwórz nawigację" data-menu-close="Zamknij nawigację"><span></span><span></span><span></span></button>
-    <nav id="main-nav" aria-label="Główna nawigacja"><a href="#features">Dlaczego ErgenOS</a><a href="#apps">Programy</a><a href="#requirements">Wymagania</a><a href="#install">Instalacja</a><a href="#faq">FAQ</a></nav>
+    <nav id="main-nav" aria-label="Główna nawigacja"><a href="#features">Dlaczego ErgenOS</a><a href="#apps">Programy</a><a href="#requirements">Wymagania</a><a href="https://ergenossw.github.io/ErgenOS-Wiki/pl/">Wiki</a><a href="#faq">FAQ</a></nav>
     <div class="header-actions"><div class="language-switcher" aria-label="Język"><a href="../" lang="en" hreflang="en" aria-label="English">EN</a><span aria-current="page">PL</span></div><a class="button small" href="#download">Pobierz 1.1</a></div>
   </header>
 
@@ -123,19 +123,14 @@
         <article><span>Tryb uruchamiania</span><h3>UEFI</h3><p>ErgenOS 1.1 instaluje się i uruchamia w trybie UEFI.</p></article>
       </div>
       <div class="hardware-notes">
-        <p><strong>Secure Boot:</strong> ErgenCTL przeprowadzi Cię przez konfigurację po instalacji systemu, korzystając z shim podpisanego przez Microsoft i własnego klucza MOK. Szczegóły znajdziesz w <a href="secure-boot.html">poradniku Secure Boot</a>.</p>
+        <p><strong>Secure Boot:</strong> ErgenCTL przeprowadzi Cię przez konfigurację po instalacji systemu, korzystając z shim podpisanego przez Microsoft i własnego klucza MOK. Szczegóły znajdziesz w <a href="https://ergenossw.github.io/ErgenOS-Wiki/pl/security/secure-boot.html">poradniku Secure Boot</a>.</p>
         <p><strong>NVIDIA:</strong> po instalacji systemu Driver Manager w ErgenPac wykrywa obsługiwane współczesne karty NVIDIA i instaluje zalecany oficjalny zestaw sterowników. Starsze lub nierozpoznane modele wymagają ręcznego wyboru, dzięki czemu program nie zainstaluje niezgodnego sterownika.</p>
       </div>
     </section>
 
     <section class="section install-section" id="install">
-      <div class="section-heading"><span class="eyebrow">Prosta instalacja</span><h2>Trzy kroki i gotowe.</h2></div>
-      <ol class="steps">
-        <li><span>1</span><div><h3>Pobierz ISO</h3><p>Pobierz obraz ErgenOS 1.1 i sprawdź jego sumę kontrolną.</p></div></li>
-        <li><span>2</span><div><h3>Nagraj pendrive</h3><p>Użyj Rufusa, Etchera lub innego sprawdzonego narzędzia.</p></div></li>
-        <li><span>3</span><div><h3>Zainstaluj system</h3><p>Uruchom komputer z pendrive'a i wykonaj kolejne kroki w instalatorze Calamares.</p></div></li>
-      </ol>
-      <a class="text-link guide-link" href="installation.html">Przeczytaj pełny poradnik instalacji <span>→</span></a>
+      <div class="section-heading"><span class="eyebrow">Dokumentacja</span><h2>Poznaj swój system.</h2><p>Instalacja, administracja i odzyskiwanie — wszystkie poradniki znajdziesz w ErgenOS Wiki.</p></div>
+      <a class="button" href="https://ergenossw.github.io/ErgenOS-Wiki/pl/">Otwórz ErgenOS Wiki <span aria-hidden="true">→</span></a>
     </section>
 
     <section class="download" id="download">
@@ -150,12 +145,12 @@
         <details><summary>Czy ErgenOS jest dystrybucją dla graczy?</summary><p>Jeszcze nie. Rozwiązania dla graczy są częścią dalszych planów, ale ErgenOS 1.1 pozostaje uniwersalnym systemem do codziennego użytku.</p></details>
         <details><summary>Jak dostarczane są aktualizacje?</summary><p>Pakiety Archa pochodzą ze standardowych repozytoriów Arch Linux. Aplikacje ErgenOS są dostarczane przez podpisane repozytorium ErgenOS i obsługiwane przez Pacmana lub ErgenPac.</p></details>
         <details><summary>Czy mogę korzystać z AUR?</summary><p>Tak. Podczas instalacji możesz pozostać przy oficjalnych repozytoriach albo włączyć yay, paru lub Chaotic-AUR.</p></details>
-        <details><summary>Czy ErgenOS obsługuje Secure Boot?</summary><p>Tak, eksperymentalnie po instalacji. ErgenCTL prowadzi przez cały proces, a potrzebne pakiety pochodzą z podpisanego repozytorium ErgenOS. Obecne ISO nadal wymaga wyłączenia Secure Boot na czas instalacji; później skorzystaj z <a href="secure-boot.html">poradnika konfiguracji</a>.</p></details>
+        <details><summary>Czy ErgenOS obsługuje Secure Boot?</summary><p>Tak, eksperymentalnie po instalacji. ErgenCTL prowadzi przez cały proces, a potrzebne pakiety pochodzą z podpisanego repozytorium ErgenOS. Obecne ISO nadal wymaga wyłączenia Secure Boot na czas instalacji; później skorzystaj z <a href="https://ergenossw.github.io/ErgenOS-Wiki/pl/security/secure-boot.html">poradnika konfiguracji</a>.</p></details>
       </div>
     </section>
   </main>
 
-  <footer><a class="brand" href="#top"><img src="../assets/ergenos-logo.png" alt=""><span>ErgenOS</span></a><p>Niezależny. Otwarty. Dopracowany.</p><div><a href="installation.html">Instalacja</a><a href="known-limitations.html">Znane ograniczenia</a><a href="https://github.com/ErgenosSW">GitHub</a><a href="https://github.com/ErgenosSW/ErgenOS-Linux/issues">Zgłoś problem</a><a href="https://github.com/ErgenosSW/ErgenOS-Linux/blob/main/LICENSE">Licencja</a></div></footer>
+  <footer><a class="brand" href="#top"><img src="../assets/ergenos-logo.png" alt=""><span>ErgenOS</span></a><p>Niezależny. Otwarty. Dopracowany.</p><div><a href="https://ergenossw.github.io/ErgenOS-Wiki/pl/getting-started/installation.html">Instalacja</a><a href="https://ergenossw.github.io/ErgenOS-Wiki/pl/getting-started/known-limitations.html">Znane ograniczenia</a><a href="https://github.com/ErgenosSW">GitHub</a><a href="https://github.com/ErgenosSW/ErgenOS-Linux/issues">Zgłoś problem</a><a href="https://github.com/ErgenosSW/ErgenOS-Linux/blob/main/LICENSE">Licencja</a></div></footer>
   <script src="../script.js?v=0e3d0809cc0f"></script>
 </body>
 </html>
