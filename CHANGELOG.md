@@ -1,5 +1,11 @@
 # Changelog
 
+## 2026-10-12 — Screenshot refresh
+
+- Replace desktop, ErgenPac, Welcome and ErgenCTL screenshots in both locales.
+- Update image dimensions, captions and cache versions; retain full-size PNGs and WebP previews.
+
+
 ## 2026-10-12 — ISO 1.2 download
 
 - Update both locales to the complete MediaFire ISO with its SHA-256 and byte size.

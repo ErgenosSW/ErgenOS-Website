@@ -23,5 +23,5 @@ Publish the `main` branch from the repository root with GitHub Pages.
 
 Both locales link to the complete ErgenOS 1.2 ISO on MediaFire and show its
 SHA-256 and exact byte size. The GitHub release contains both ISO parts, checksum files and assembly instructions.
-Existing screenshot captions remain at 1.1 because those images have not changed.
+Desktop, ErgenPac, Welcome and ErgenCTL screenshots were refreshed on October 12, 2026. Original 1920×1200 PNGs are preserved alongside WebP previews.
 See [CHANGELOG.md](CHANGELOG.md).

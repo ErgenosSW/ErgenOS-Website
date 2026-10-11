@@ -296,7 +296,7 @@ h1 em {
 
 .desktop-shot {
   display:block;
-  aspect-ratio:16/9;
+  aspect-ratio:16/10;
   border-radius:9px;
   transform:none;
   background:#101820;
@@ -602,7 +602,7 @@ h3 {
 .screenshot-card img {
   display:block;
   width:100%;
-  aspect-ratio:16/9;
+  aspect-ratio:16/10;
   object-fit:contain;
   transition:transform .4s;
 }
@@ -1915,7 +1915,7 @@ body {
 }
 
 .app-preview img {
-  aspect-ratio:16/9;
+  aspect-ratio:16/10;
   object-fit:contain;
 }
 
