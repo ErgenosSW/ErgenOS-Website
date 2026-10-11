@@ -22,7 +22,6 @@ Publish the `main` branch from the repository root with GitHub Pages.
 ## Release content
 
 Both locales link to the complete ErgenOS 1.2 ISO on MediaFire and show its
-SHA-256 and exact byte size. GitHub release assets are still being prepared;
-the releases link points to the listing until publication is confirmed.
+SHA-256 and exact byte size. The GitHub release contains both ISO parts, checksum files and assembly instructions.
 Existing screenshot captions remain at 1.1 because those images have not changed.
 See [CHANGELOG.md](CHANGELOG.md).
