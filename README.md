@@ -21,8 +21,8 @@ Publish the `main` branch from the repository root with GitHub Pages.
 
 ## Release content
 
-Both locales describe the locally accepted ErgenOS 1.2 ISO, the default theme,
-redesigned applications, Gaming catalog and simplified GRUB. Public downloads,
-checksums and screenshot captions remain at 1.1 until a verified 1.2 artifact
-and replacement screenshots are available. Update the URL, version, checksum,
-size and release date together when publishing. See [CHANGELOG.md](CHANGELOG.md).
+Both locales link to the complete ErgenOS 1.2 ISO on MediaFire and show its
+SHA-256 and exact byte size. GitHub release assets are still being prepared;
+the releases link points to the listing until publication is confirmed.
+Existing screenshot captions remain at 1.1 because those images have not changed.
+See [CHANGELOG.md](CHANGELOG.md).

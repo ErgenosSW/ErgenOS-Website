@@ -1,5 +1,12 @@
 # Changelog
 
+## 2026-10-12 — ISO 1.2 download
+
+- Update both locales to the complete MediaFire ISO with its SHA-256 and byte size.
+- Preserve accurate 1.1 screenshot captions.
+- Link GitHub releases listing while split release assets are being prepared.
+
+
 ## 2026-10-12 — ErgenOS 1.2 preparation
 
 - Add matching English/Polish descriptions of the locally tested 1.2 image.
