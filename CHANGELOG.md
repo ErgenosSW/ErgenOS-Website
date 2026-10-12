@@ -1,5 +1,11 @@
 # Changelog
 
+## 2026-10-12 — ErgenOS 1.2 published
+
+- Link the complete public ISO on MediaFire and the tagged GitHub release.
+- Publish the verified byte size and SHA-256 in both languages.
+- Point installation, Secure Boot and limitations guidance to the synchronized ErgenOS Wiki.
+
 ## 2026-10-12 — Screenshot refresh
 
 - Replace desktop, ErgenPac, Welcome and ErgenCTL screenshots in both locales.
